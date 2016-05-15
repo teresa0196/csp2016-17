@@ -30,6 +30,9 @@ Click `Generate Key` if you do not already have one, and leave the password fiel
 
 ### Python
 
+- [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
+- [Python Documentation](https://www.python.org/doc/)
+
 ### HTML
 
 ### CSS
