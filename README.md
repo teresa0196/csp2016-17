@@ -21,3 +21,15 @@ Click `Generate Key` if you do not already have one, and leave the password fiel
 [Download the latest version of Python 3.5](https://www.python.org/downloads/) from the official website. Install it and be sure to check the option add it to your path. Then [download the latest version of Python 2.7](https://www.python.org/downloads/) from the official website. Install it and be sure to check the option add it to your path.
 
 ### Levinux
+
+## Resources
+
+### Python
+
+### HTML
+
+### CSS
+
+### JavaScript
+
+- [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
