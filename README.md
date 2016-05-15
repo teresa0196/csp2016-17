@@ -1,6 +1,6 @@
 # Computer Science Principles 2016-17
 
-You must have at least 3GB of free hard drive space to run the software for this course.
+## Course Requirements
 
 ## Programs to Install
 
