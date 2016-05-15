@@ -4,6 +4,10 @@
 
 ## Programs to Install
 
+### Firefox Developer Edition
+
+[Download the latest version of Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) from Mozilla and install using the default options. Open it and create a sync account using your school email.
+
 ### Notepad++
 
 ### Git
