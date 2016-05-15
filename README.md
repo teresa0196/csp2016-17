@@ -10,7 +10,7 @@ You will need to have at least 3GB of free hard drive space to run the software 
 
 Open the Git GUI from your start menu and under the `Help` menu, choose `Show SSH Key`.
 
-![Show SSH Key](http://i.imgur.com/3V1oFNV.gifv)
+![Show SSH Key](http://i.imgur.com/5G9yf10.png)
 
 Click `Generate Key` if you do not already have one, and leave the password field blank. Then copy the key to your clipboard and go to your GitHub account settings and [add the new key to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
 
