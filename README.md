@@ -30,17 +30,14 @@ Click `Generate Key` if you do not already have one, and leave the password fiel
 
 ### CSS
 
-- [Firebug](https://www.getfirebug.com/)
 - [Mozilla Thimble](https://thimble.mozilla.org/en-US/)
 
 ### HTML
 
-- [Firebug](https://www.getfirebug.com/)
 - [Mozilla Thimble](https://thimble.mozilla.org/en-US/)
 
 ### JavaScript
 
-- [Firebug](https://www.getfirebug.com/)
 - [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - [JSHint](http://jshint.com/)
 - [Mozilla Thimble](https://thimble.mozilla.org/en-US/)
