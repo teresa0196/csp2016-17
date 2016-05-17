@@ -10,6 +10,10 @@
 
 ### Notepad++
 
+### Evernote
+
+[Go to the Evernote website](https://evernote.com) and create an account using your school email address. Then [download Evernote for your computer](https://evernote.com/download/) and install using the default settings. I recommend installing it on your phone as well. Once you install Evernote, log in using the account you just created.
+
 ### Git
 
 [Download the latest version of Git](https://git-scm.com/) from the official website. Install it using the default options.
