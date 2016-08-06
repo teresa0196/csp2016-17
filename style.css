@@ -18,11 +18,15 @@ p.checkpoint {
     padding: 1em;
     background-color: coral;
     font-family: monospace;
-    font-size: 2em;
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 code {
     background-color: coral;
+    border-style: dashed;
+    border-width: thin;
+    padding: .25em;
 }
 
 h1 {
