@@ -21,9 +21,45 @@
       will need to borrow a Windows computer to complete this
       assignment. We will use our PocketCHIPs for the Bash practice.</p>
     <p>This is a much longer lesson, so don't get frustrated if it takes
-      you longer than you think it should.<br>
-    </p>
-    <h2>PowerShell</h2>
+      you longer than you think it should.</p>
+    <ul id="mozToc">
+      <!--mozToc h2 1 h3 2 h4 3 h5 4 h6 5-->
+      <li><a href="#mozTocId844421">PowerShell</a>
+        <ul>
+          <li><a href="#mozTocId390239">pwd</a></li>
+          <li><a href="#mozTocId456761">cd</a></li>
+          <li><a href="#mozTocId113707">mkdir</a></li>
+          <li><a href="#mozTocId175105">ls</a></li>
+          <li><a href="#mozTocId960713">rmdir</a></li>
+          <li><a href="#mozTocId678629">pushd, popd</a></li>
+          <li><a href="#mozTocId513639">New-Item</a></li>
+          <li><a href="#mozTocId740790">cp</a></li>
+          <li><a href="#mozTocId851765">mv</a></li>
+          <li><a href="#mozTocId275220">more</a></li>
+          <li><a href="#mozTocId236161">cat</a></li>
+          <li><a href="#mozTocId736782">rm</a></li>
+          <li><a href="#mozTocId763018">exit</a></li>
+        </ul>
+      </li>
+      <li><a href="#mozTocId625745">Bash</a>
+        <ul>
+          <li><a href="#mozTocId799682">pwd</a></li>
+          <li><a href="#mozTocId643106">cd</a></li>
+          <li><a href="#mozTocId198645">mkdir</a></li>
+          <li><a href="#mozTocId297610">ls</a></li>
+          <li><a href="#mozTocId254558">rmdir</a></li>
+          <li><a href="#mozTocId381126">pushd, popd</a></li>
+          <li><a href="#mozTocId296991">touch</a></li>
+          <li><a href="#mozTocId947988">cp</a></li>
+          <li><a href="#mozTocId319241">mv</a></li>
+          <li><a href="#mozTocId73089">less</a></li>
+          <li><a href="#mozTocId456131">cat</a></li>
+          <li><a href="#mozTocId368437">rm</a></li>
+          <li><a href="#mozTocId719770">exit</a></li>
+        </ul>
+      </li>
+    </ul>
+    <h2><a class="mozTocH2" name="mozTocId844421"></a>PowerShell</h2>
     <p>You must use a Windows computer for this part of the exercise, so
       please let Mr. Olinda know if you need to borrow a school
       computer. Open the Start Menu and search for <code>Windows
@@ -37,35 +73,196 @@
           width="800"></p>
       <div align="left">
         <p>Yours should show your user name instead of "John Olinda,"
-          but other than that it should appear identical.</p>
-        <h3>pwd</h3>
+          but other than that it should appear identical. I'll refer to
+          the "prompt" throughout this lesson and throughout the course.
+          The PowerShell prompt ends in the &gt; symbol and indicates
+          that you can type commands. Sometimes I will ask you to clear
+          your terminal by typing <code>clear</code> and pressing
+          Enter. This will erase the content of the command line, but it
+          will not undo previous commands.<br>
+        </p>
+        <h3><a class="mozTocH3" name="mozTocId390239"></a>Checkpoint 1:
+          pwd</h3>
+        <p>This command is an abbreviation for "print working directory.
+          This command shows you what directory (folder) you're in,
+          which can be helpful if you are lost. Before you do anything
+          else, just type <code>pwd</code> at the prompt and press
+          Enter. Do this three times.<br>
+        </p>
+        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+          this checkpoint.</p>
+        <h3><a class="mozTocH3" name="mozTocId456761"></a>Checkpoint 2:
+          cd</h3>
+        <p>This command is an abbreviation for "change directory." It
+          allows you to move from one directory (folder) to another in
+          the command line. It can also reset your working directory to
+          your home directory, which can be much faster than changing
+          directories one level at a time.</p>
+        <p>Type <code>cd</code> and press Enter. Notice that nothing
+          changed. This is because you just told the computer to change
+          to the current directory.</p>
+        <p>Type <code>cd Downloads</code> and press Enter. Check to see
+          if your prompt now includes the Downloads folder just before
+          the &gt; symbol. Now, any commands you execute will run in
+          this directory (folder) instead of your home directory.</p>
+        <p>Type <code>cd ..</code> and press Enter. Check to see what
+          your current working directory is. It should be your home
+          directory. If you're not sure, just type <code>pwd</code> and
+          press Enter to check. If you went down another directory, you
+          could type <code>cd ../..</code> to go back up twice with one
+          command. We will practice this in the next checkpoint.</p>
+        <p>Type <code>cd Mu</code> and press Tab. PowerShell should
+          fill in the missing letters and show <code>cd .\Music\</code>
+          instead. Now press Enter. When you're using the command line,
+          you can press Tab to autocomplete the command, directory, or
+          file that you are working on instead of typing the whole
+          command.<br>
+        </p>
+        <p>Next, type <code>cd ~</code> and notice that you're back in
+          your home directory.</p>
+        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+          this checkpoint.</p>
+        <h3><a class="mozTocH3" name="mozTocId113707"></a>Checkpoint 3:
+          mkdir</h3>
+        <p>The mkdir command creates a new directory inside your working
+          directory. You should be in your home directory. If not, press
+          cd ~ to go there. Then type mkdir test and press Enter to
+          create a directory called "test" inside your home directory.
+          Then type cd test and press Enter to go down into the
+          directory you just created.</p>
+        <p>Type cd anotherTest and press Enter to create another
+          directory inside the "test" directory. Then type cd
+          anotherTest and press Enter to go down into this new
+          directory.<br>
+        </p>
+        <h3><a class="mozTocH3" name="mozTocId175105"></a>Checkpoint 4:
+          ls</h3>
         <p><br>
         </p>
-        <h3>cd</h3>
+        <h3><a class="mozTocH3" name="mozTocId960713"></a>Checkpoint 5:
+          rmdir</h3>
         <p><br>
         </p>
-        <h3>mkdir</h3>
+        <h3><a class="mozTocH3" name="mozTocId678629"></a>Checkpoint 6:
+          pushd, popd</h3>
         <p><br>
         </p>
-        <p>ls</p>
+        <h3><a class="mozTocH3" name="mozTocId513639"></a>Checkpoint 7:
+          New-Item</h3>
         <p><br>
         </p>
-        <p>rmdir</p>
+        <h3><a class="mozTocH3" name="mozTocId740790"></a>Checkpoint 8:
+          cp</h3>
         <p><br>
         </p>
-        <p>pushd, popd</p>
+        <h3><a class="mozTocH3" name="mozTocId851765"></a>Checkpoint 9:
+          mv</h3>
         <p><br>
         </p>
-        <p>New-Item</p>
+        <h3><a class="mozTocH3" name="mozTocId275220"></a>Checkpoint 10:
+          more</h3>
         <p><br>
         </p>
+        <h3><a class="mozTocH3" name="mozTocId236161"></a>Checkpoint 11:
+          cat</h3>
+        <p><br>
+        </p>
+        <h3><a class="mozTocH3" name="mozTocId736782"></a>Checkpoint 12:
+          rm</h3>
+        <p><br>
+        </p>
+        <h3><a class="mozTocH3" name="mozTocId763018"></a>Checkpoint 13:
+          exit</h3>
         <p><br>
         </p>
       </div>
     </div>
-    <h2>Bash</h2>
+    <h2><a class="mozTocH2" name="mozTocId625745"></a>Bash</h2>
+    <p>You must use a PocketCHIP for this part of the exercise, so
+      please ask for yours. Open the Terminal. You should see a black
+      screen that says <code>chip@chip:~$</code> and has a blinking
+      cursor. I'll refer to the "prompt" throughout this lesson and
+      throughout the course. The Bash prompt ends in the $ symbol and
+      indicates that you can type commands. Sometimes I will ask you to
+      clear your terminal by typing <code>clear</code> and pressing
+      Enter. This will erase the content of the command line, but it
+      will not undo previous commands.</p>
+    <h3><a class="mozTocH3" name="mozTocId799682"></a>pwd</h3>
+    <p>This command is an abbreviation for "print working directory.
+      This command shows you what directory (folder) you're in, which
+      can be helpful if you are lost. Before you do anything else, just
+      type <code>pwd</code> at the prompt and press Enter. Do this
+      three times.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+      this checkpoint.</p>
+    <p>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId643106"></a>cd</h3>
+    <p>This command is an abbreviation for "change directory." It allows
+      you to move from one directory (folder) to another in the command
+      line. It can also reset your working directory to your home
+      directory, which can be much faster than changing directories one
+      level at a time.</p>
+    <p>Type <code>cd</code> and press Enter. Notice that nothing
+      changed. This is because you just told the computer to change to
+      the current directory.</p>
+    <p>Type <code>cd Downloads</code> and press Enter. Check to see if
+      your prompt now includes the Downloads folder just before the $
+      symbol. Now, any commands you execute will run in this directory
+      (folder) instead of your home directory.</p>
+    <p>Type <code>cd ..</code> and press Enter. Check to see what your
+      current working directory is. It should be your home directory. If
+      you're not sure, just type <code>pwd</code> and press Enter to
+      check. If you went down another directory, you could type <code>cd
+        ../..</code> to go back up twice with one command. We will
+      practice this in the next checkpoint.</p>
+    <p>Type <code>cd Mu</code> and press Tab. Bash should fill in the
+      missing letters and show <code>cd Music/</code> instead. Now
+      press Enter. When you're using the command line, you can press Tab
+      to autocomplete the command, directory, or file that you are
+      working on instead of typing the whole command.<br>
+    </p>
+    <p>Next, type <code>cd ~</code> and notice that you're back in your
+      home directory.</p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+      this checkpoint.</p>
+    <p>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId198645"></a>mkdir</h3>
     <p><br>
     </p>
+    <h3><a class="mozTocH3" name="mozTocId297610"></a>ls</h3>
+    <p><br>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId254558"></a>rmdir</h3>
+    <p><br>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId381126"></a>pushd, popd</h3>
+    <p><br>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId296991"></a>touch</h3>
+    <p><br>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId947988"></a>cp</h3>
+    <p><br>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId319241"></a>mv</h3>
+    <p><br>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId73089"></a>less</h3>
+    <p><br>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId456131"></a>cat</h3>
+    <p><br>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId368437"></a>rm</h3>
+    <p><br>
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId719770"></a>exit</h3>
+    <p><br>
+    </p>
+    <p> </p>
     <p></p>
     <p></p>
     <hr size="2" width="100%">
