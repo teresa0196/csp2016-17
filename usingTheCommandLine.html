@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -79,16 +79,14 @@
           that you can type commands. Sometimes I will ask you to clear
           your terminal by typing <code>clear</code> and pressing
           Enter. This will erase the content of the command line, but it
-          will not undo previous commands.<br>
-        </p>
+          will not undo previous commands.</p>
         <h3><a class="mozTocH3" name="mozTocId390239"></a>Checkpoint 1:
           pwd</h3>
         <p>This command is an abbreviation for "print working directory.
           This command shows you what directory (folder) you're in,
           which can be helpful if you are lost. Before you do anything
           else, just type <code>pwd</code> at the prompt and press
-          Enter. Do this three times.<br>
-        </p>
+          Enter. Do this three times.</p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId456761"></a>Checkpoint 2:
@@ -116,8 +114,7 @@
           instead. Now press Enter. When you're using the command line,
           you can press Tab to autocomplete the command, directory, or
           file that you are working on instead of typing the whole
-          command.<br>
-        </p>
+          command.</p>
         <p>Next, type <code>cd ~</code> and notice that you're back in
           your home directory.</p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
@@ -127,12 +124,14 @@
         <p>This command creates a new directory inside your working
           directory. You should be in your home directory. If not, type
           <code>cd ~</code> and press Enter to go there. Then type <code>mkdir
+
             test</code> and press Enter to create a directory called
           "test" inside your home directory. Then type <code>cd test</code>
           and press Enter to go down into the directory you just
           created.</p>
         <p>Type <code>cd anotherTest</code> and press Enter to create
           another directory inside the "test" directory. Then type <code>cd
+
             anotherTest</code> and press Enter to go down into this new
           directory.</p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
@@ -159,53 +158,75 @@
           you have removed it. When you check your home directory in
           Windows Explorer you should see that both directories are
           gone.</p>
+        <p>Now, type <code>mkdir -p test/anotherTest</code> and press
+          Enter. The <code>-p</code> is what we call a flag and it
+          allows us to modify commands to do something slightly
+          different. In this case, the <code>-p</code> flag allows us
+          to create two directories, one inside the other, at the same
+          time. Now type <code>rmdir test</code> and see what happens.<br>
+        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId678629"></a>Checkpoint 6:
           pushd, popd</h3>
-        <p><br>
+        <p>These two commands allow you to quickly switch between
+          different directories. It works a little differently in
+          PowerShell than it will in Bash. <br>
+        </p>
+        <p>First, type <code>mkdir -p test/anotherTest/yetAnotherTest</code>
+          and press Enter. Then type <code>pushd
+            test/anotherTest/yetAnotherTest</code> and see what happens.
+          Confirm that you're in the "yetAnotherTest" directory with <code>pwd</code>.</p>
+        <p>Then type <code>popd</code> and press Enter. Now where are
+          you? Confirm this with <code>pwd</code>.</p>
+        <p>Use <code>ls</code> and <code>pushd</code> to move to
+          another directory and then use <code>popd</code> to move
+          back. Try this at least three more times using different
+          directories.<br>
         </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId513639"></a>Checkpoint 7:
           New-Item</h3>
-        <p><br>
+        <p>This command allows you to create new files. First, use <code>cd</code>
+          to move to the "yetAnotherTest" directory. Once you get there,
+          type <code>New-Item test.txt</code> and press Enter. Confirm
+          you created a new file with <code>ls</code>.</p>
+        <p>Then go back to your home directory using <code>cd</code>
+          and type <code>New-Item
+            test/anotherTest/yetAnotherTest/hello.txt</code> and press
+          Enter. Then confirm you created a new file by typing <code>ls
+            test/anotherTest/yetAnotherTest/</code> and pressing Enter.
+          You just created a file in a directory below your current
+          working directory without actually moving there. Then you
+          listed the contents of that directory without moving.<br>
         </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId740790"></a>Checkpoint 8:
           cp</h3>
-        <p><br>
-        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId851765"></a>Checkpoint 9:
           mv</h3>
-        <p><br>
-        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId275220"></a>Checkpoint 10:
           more</h3>
-        <p><br>
-        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId236161"></a>Checkpoint 11:
           cat</h3>
-        <p><br>
-        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId736782"></a>Checkpoint 12:
           rm</h3>
-        <p><br>
-        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId763018"></a>Checkpoint 13:
           exit</h3>
-        <p><br>
+        <p>This command allows you to close the terminal. Type <code>exit</code>
+          and press Enter to close the terminal.<br>
         </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
@@ -225,13 +246,10 @@
     <p>This command is an abbreviation for "print working directory.
       This command shows you what directory (folder) you're in, which
       can be helpful if you are lost. Before you do anything else, just
-      type <code>pwd</code> at the prompt and press Enter. Do this
-      three times.<br>
-    </p>
+      type <code>pwd</code> at the prompt and press Enter. Do this thre</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId643106"></a>Checkpoint 16: cd</h3>
     <p>This command is an abbreviation for "change directory." It allows
       you to move from one directory (folder) to another in the command
@@ -249,24 +267,24 @@
       current working directory is. It should be your home directory. If
       you're not sure, just type <code>pwd</code> and press Enter to
       check. If you went down another directory, you could type <code>cd
+
         ../..</code> to go back up twice with one command. We will
       practice this in the next checkpoint.</p>
     <p>Type <code>cd Mu</code> and press Tab. Bash should fill in the
       missing letters and show <code>cd Music/</code> instead. Now
       press Enter. When you're using the command line, you can press Tab
       to autocomplete the command, directory, or file that you are
-      working on instead of typing the whole command.<br>
-    </p>
+      working on instead of typing the whole </p>
     <p>Next, type <code>cd ~</code> and notice that you're back in your
       home directory.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId198645"></a>Checkpoint 17:
       mkdir</h3>
     <p>This command creates a new directory inside your working
       directory. You should be in your home directory. If not, type <code>cd
+
         ~</code> and press Enter to go there. Then type <code>mkdir
         test</code> and press Enter to create a directory called "test"
       inside your home directory. Then type <code>cd test</code> and
@@ -277,8 +295,7 @@
       directory.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId297610"></a>Checkpoint 18: ls</h3>
     <p>This command lists the files and directories inside the current
       working directory. Type <code>cd ~</code> and press Enter to go
@@ -286,8 +303,7 @@
       Enter to see what's inside the directory.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId254558"></a>Checkpoint 19:
       rmdir</h3>
     <p>This command removes directories. Type <code>cd ~</code> and
@@ -298,77 +314,98 @@
       and delete the "test" directory. Use <code>ls</code> to make sure
       you have removed it. When you check your home directory in the
       file browser you should see that both directories are gone.</p>
+    <p>Now, type <code>mkdir -p test/anotherTest</code> and press
+      Enter. The <code>-p</code> is what we call a flag and it allows
+      us to modify commands to do something slightly different. In this
+      case, the <code>-p</code> flag allows us to create two
+      directories, one inside the other, at the same time. Now type <code>rmdir
+        test</code> and see what happens.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId381126"></a>Checkpoint 19:
       pushd, popd</h3>
-    <p><br>
+    <p>These two commands allow you to quickly switch between different
+      directories. It works a little differently in Bash than in
+      PowerShell.<br>
     </p>
+    <p>First, type <code>mkdir -p test/anotherTest/yetAnotherTest</code>
+      and press Enter. Then type <code>pushd
+        test/anotherTest/yetAnotherTest</code> and see what happens.
+      Confirm that you're in the "yetAnotherTest" directory with <code>pwd</code>.</p>
+    <p>Then type <code>popd</code> and press Enter. Now where are you?
+      Confirm this with <code>pwd</code>.</p>
+    <p>Use <code>ls</code> and <code>pushd</code> to move to another
+      directory and then use <code>popd</code> to move back. Try this
+      at least three more times using different directories.</p>
+    <p>Now, type <code>cd ~</code> and press Enter. Then type <code>pushd
+        test/anotherTest/yetAnotherTest</code> and press Enter. Navigate
+      to any other directory besides "test" and then type <code>pushd</code>
+      and press Enter.</p>
+    <p>When you run a command all by itself, you're running it without
+      any arguments. What happened when you ran <code>pushd</code>
+      without any arguments?<br>
+    </p>
+    <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId296991"></a>Checkpoint 20:
       touch</h3>
-    <p><br>
-    </p>
+    <p>This command allows you to create new files. First, use <code>cd</code>
+      to move to the "yetAnotherTest" directory. Once you get there,
+      type <code>touch test.txt</code> and press Enter. Confirm you
+      created a new file with <code>ls</code>.</p>
+    <p>Then go back to your home directory using <code>cd</code> and
+      type <code>touch test/anotherTest/yetAnotherTest/hello.txt</code>
+      and press Enter. Then confirm you created a new file by typing <code>ls
+        test/anotherTest/yetAnotherTest/</code> and pressing Enter. You
+      just created a file in a directory below your current working
+      directory without actually moving there. Then you listed the
+      contents of that directory without moving.</p>
+    <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId947988"></a>Checkpoint 21: cp</h3>
-    <p><br>
-    </p>
+    <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId319241"></a>Checkpoint 22: mv</h3>
-    <p><br>
-    </p>
+    <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId73089"></a>Checkpoint 23: less</h3>
-    <p><br>
-    </p>
+    <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId456131"></a>Checkpoint 24: cat</h3>
-    <p><br>
-    </p>
+    <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId368437"></a>Checkpoint 25: rm</h3>
-    <p><br>
-    </p>
+    <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
+    <p> </p>
     <h3><a class="mozTocH3" name="mozTocId719770"></a>Checkpoint 26:
       exit</h3>
-    <p><br>
+    <p></p>
+    <p>This command allows you to close the terminal. Type <code>exit</code>
+      and press Enter to close the terminal.<br>
     </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <p>
-    </p>
     <p> </p>
-    <p></p>
-    <p></p>
     <hr size="2" width="100%">
     <p><strong>Turn in your checkpoint sheet to the assignment basket
         once it is completely signed. You may now work on stretch
-        projects.</strong></p>
-    <p></p>
-    <p> </p>
+        projects. </strong></p>
+    <strong>
+    </strong>
   </body>
 </html>
