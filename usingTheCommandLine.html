@@ -258,16 +258,51 @@
         <p>Then type <code>more loremIpsum.txt</code> and notice that
           the whole file is displayed in your terminal window. If the
           file was too long you could use the space bar to display the
-          next section until you had seen the whole file.<br>
+          next section until you had seen the whole file. This is called
+          paging.<br>
         </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId236161"></a>Checkpoint 11:
           cat</h3>
+        <p>Unlike the last command, this one streams the file to your
+          terminal without any paging. But you can also stream multiple
+          files to your terminal. First, open "yetAnotherTest" in
+          Windows Explorer and add some text to each text file besides
+          loremIpsum.txt using your text editor. Save each file and then
+          move on.</p>
+        <p>Type <code>cat loremIpsum.txt</code> and press Enter.</p>
+        <p>Type <code>cat loremIpsum.txt hello.txt test.txt</code> and
+          press Enter. Then try the command with the text files in a
+          different order.</p>
+        <p>Can you stream the same file more than once in the same
+          command? What happens if the output is too long for your
+          terminal window?<br>
+        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId736782"></a>Checkpoint 12:
           rm</h3>
+        <p>Now we're going to clean up our files and directories from
+          this lesson using the <code>rm</code> and <code>rmdir</code>
+          commands.</p>
+        <p>Make sure you're in the "yetAnotherTest" directory. Then type
+          rm loremIpsum.txt and press Enter. Use ls to see if the file
+          is gone. Then use rm to delete all the other files in the
+          directory.</p>
+        <p>Now try to use <code>rmdir</code> to delete the "pleaseStop"
+          and "really" directories. Does it work? In Bash you will get
+          an error, but in PowerShell you are able to decide what to do
+          with directories that aren't empty.</p>
+        <p>Now use <code>cd</code> to go to your home directory. Then
+          type <code>rm -r test</code> in order to delete the whole
+          directory, including its contents.</p>
+        <p>Both commands can delete directories and files, but which one
+          do you use to delete files in the working directory? You
+          should always use <code>rm</code> and <code>rmdir</code>
+          very carefully since it's easy to damage your system by
+          accidentally deleting files.<br>
+        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId763018"></a>Checkpoint 13:
@@ -460,25 +495,55 @@
     <p>This command is used to display the contents of a text file,
       especially files that are too long to fit into your terminal
       window.</p>
-    <p><a
-        href="file:///C:/Users/John%20Olinda/projects/csp2016-17/loremIpsum.txt">Download
-        loremIpsum.txt</a> and save it to your Downloads folder. Then
-      use <code>cp</code> to create a copy in the "yetAnotherTest"
-      directory.</p>
+    <p>Use cd to move to the "yetAnotherTest" directory. Then type curl
+      and the <a href="loremIpsum.txt">URL (link) of the loremIpsum.txt
+        file</a> to download the file to the working directory.</p>
     <p>Then type <code>less loremIpsum.txt</code> and notice that the
       whole file is too large to display in your terminal window. Use
       the space bar to display the next section until you have seen the
-      whole file.</p>
+      whole file. This is called paging.</p>
     <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <p> </p>
     <h3><a class="mozTocH3" name="mozTocId456131"></a>Checkpoint 24: cat</h3>
+    <p>Unlike the last command, this one streams the file to your
+      terminal without any paging. But you can also stream multiple
+      files to your terminal. First, open "yetAnotherTest" in Windows
+      Explorer and add some text to each text file besides
+      loremIpsum.txt using your text editor. Save each file and then
+      move on.</p>
+    <p>Type <code>cat loremIpsum.txt</code> and press Enter.</p>
+    <p>Type <code>cat loremIpsum.txt hello.txt test.txt</code> and
+      press Enter. Then try the command with the text files in a
+      different order.</p>
+    <p>Can you stream the same file more than once in the same command?
+      What happens if the output is too long for your terminal window?</p>
     <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <p> </p>
     <h3><a class="mozTocH3" name="mozTocId368437"></a>Checkpoint 25: rm</h3>
+    <p>Now we're going to clean up our files and directories from this
+      lesson using the <code>rm</code> and <code>rmdir</code>
+      commands.</p>
+    <p>Make sure you're in the "yetAnotherTest" directory. Then type rm
+      loremIpsum.txt and press Enter. Use ls to see if the file is gone.
+      Then use rm to delete all the other files in the directory.</p>
+    <p>Now try to use <code>rmdir</code> to delete the "pleaseStop" and
+      "really" directories. Does it work? In Bash you will get an error,
+      but in PowerShell you are able to decide what to do with
+      directories that aren't empty.</p>
+    <p>Now use <code>cd</code> to go to your home directory. Then type
+      <code>rm -rf test</code> in order to delete the whole directory,
+      including its contents. The <code>-f</code> flag means "force"
+      which deletes the directory even if there are things inside it.<br>
+    </p>
+    <p>Both commands can delete directories and files, but which one do
+      you use to delete files in the working directory? You should
+      always use <code>rm</code> and <code>rmdir</code> very carefully
+      since it's easy to damage your system by accidentally deleting
+      files.</p>
     <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
