@@ -205,14 +205,61 @@
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId740790"></a>Checkpoint 8:
           cp</h3>
+        <p>This command allows you to copy files and directories from
+          one place to another as well as within the same directory.
+          Files can be copied exactly or renamed when copied.</p>
+        <p>Move to the "yetAnotherTest" directory. Type <code>cp
+            hello.txt howdy.txt</code> and press Enter. Then use <code>ls</code>
+          to see if you now have three files - test.txt, hello.txt, and
+          howdy.txt - in the directory. You just copied the file and
+          renamed it at the same time.</p>
+        <p>Then type <code>cp hello.txt pleaseStop/</code> and press
+          Enter. Now when you use <code>ls</code> you should see a new
+          directory inside "yetAnotherTest". You just copied a file into
+          a new directory with one command.</p>
+        <p>Type <code>cp -r pleaseStop really</code> and press Enter.
+          Then use <code>ls</code> to make sure that you can see the
+          "really" directory. You just copied a directory and its
+          contents to a new directory. The <code>-r</code> flag stands
+          for "recurse" which affects the directory and all of its
+          contents.<br>
+        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId851765"></a>Checkpoint 9:
           mv</h3>
+        <p>This command is similar to <code>cp</code> except that
+          instead of copying the file, it moves the file to a new
+          location. However, just like <code>cp</code>, <code>mv</code>
+          can also rename files at the same time. In fact, most of the
+          time you will use this command to rename files, not actually
+          move them to a new place.<br>
+        </p>
+        <p>Make sure you are in the "yetAnotherTest" directory and type
+          <code>mv test.txt whenWillThisEnd.txt</code> and press Enter.
+          Then use <code>ls</code> to confirm that test.txt is now
+          called whenWillThisEnd.txt instead.</p>
+        <p>Now type <code>mv really yesReally</code> and press Enter.
+          You can use <code>ls</code> to make sure you've renamed the
+          directory correctly.</p>
+        <p>Now use <code>mv</code> to rename whenWillThisEnd.txt and
+          "yesReally" back to their original names.<br>
+        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId275220"></a>Checkpoint 10:
           more</h3>
+        <p>This command is used to display the contents of a text file,
+          especially files that are too long to fit into your terminal
+          window.</p>
+        <p><a href="loremIpsum.txt">Download loremIpsum.txt</a> and save
+          it to your Downloads folder. Then use <code>cp</code> to
+          create a copy in the "yetAnotherTest" directory.</p>
+        <p>Then type <code>more loremIpsum.txt</code> and notice that
+          the whole file is displayed in your terminal window. If the
+          file was too long you could use the space bar to display the
+          next section until you had seen the whole file.<br>
+        </p>
         <p class="checkpoint">Raise your hand and have Mr. Olinda verify
           this checkpoint.</p>
         <h3><a class="mozTocH3" name="mozTocId236161"></a>Checkpoint 11:
@@ -368,16 +415,60 @@
       this checkpoint.</p>
     <p> </p>
     <h3><a class="mozTocH3" name="mozTocId947988"></a>Checkpoint 21: cp</h3>
+    <p>This command allows you to copy files and directories from one
+      place to another as well as within the same directory. Files can
+      be copied exactly or renamed when copied.</p>
+    <p>Move to the "yetAnotherTest" directory. Type <code>cp hello.txt
+        howdy.txt</code> and press Enter. Then use <code>ls</code> to
+      see if you now have three files - test.txt, hello.txt, and
+      howdy.txt - in the directory. You just copied the file and renamed
+      it at the same time.</p>
+    <p>Then type <code>cp hello.txt pleaseStop/</code> and press Enter.
+      Now when you use <code>ls</code> you should see a new directory
+      inside "yetAnotherTest". You just copied a file into a new
+      directory with one command.</p>
+    <p>Type <code>cp -r pleaseStop really</code> and press Enter. Then
+      use <code>ls</code> to make sure that you can see the "really"
+      directory. You just copied a directory and its contents to a new
+      directory. The <code>-r</code> flag stands for "recurse" which
+      affects the directory and all of its contents.</p>
     <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <p> </p>
     <h3><a class="mozTocH3" name="mozTocId319241"></a>Checkpoint 22: mv</h3>
+    <p>This command is similar to <code>cp</code> except that instead
+      of copying the file, it moves the file to a new location. However,
+      just like <code>cp</code>, <code>mv</code> can also rename files
+      at the same time. In fact, most of the time you will use this
+      command to rename files, not actually move them to a new place.<br>
+    </p>
+    <p>Make sure you are in the "yetAnotherTest" directory and type <code>mv
+        test.txt whenWillThisEnd.txt</code> and press Enter. Then use <code>ls</code>
+      to confirm that test.txt is now called whenWillThisEnd.txt
+      instead.</p>
+    <p>Now type <code>mv really yesReally</code> and press Enter. You
+      can use <code>ls</code> to make sure you've renamed the directory
+      correctly.</p>
+    <p>Now use <code>mv</code> to rename whenWillThisEnd.txt and
+      "yesReally" back to their original names.</p>
     <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <p> </p>
     <h3><a class="mozTocH3" name="mozTocId73089"></a>Checkpoint 23: less</h3>
+    <p>This command is used to display the contents of a text file,
+      especially files that are too long to fit into your terminal
+      window.</p>
+    <p><a
+        href="file:///C:/Users/John%20Olinda/projects/csp2016-17/loremIpsum.txt">Download
+        loremIpsum.txt</a> and save it to your Downloads folder. Then
+      use <code>cp</code> to create a copy in the "yetAnotherTest"
+      directory.</p>
+    <p>Then type <code>less loremIpsum.txt</code> and notice that the
+      whole file is too large to display in your terminal window. Use
+      the space bar to display the next section until you have seen the
+      whole file.</p>
     <p></p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
