@@ -127,7 +127,6 @@
 
 
 
-
             test</code> and press Enter to create a directory called
           "test" inside your home directory. Then type <code>cd test</code>
           and press Enter to go down into the directory you just
@@ -277,9 +276,8 @@
           move on.</p>
         <p>Type <code>cat loremIpsum.txt</code> and press Enter.</p>
         <p>Type <code>cat loremIpsum.txt hello.txt test.txt</code> and
-          press Enter. What happened? Try just typing <code>cat</code>
-          and then pressing Enter and entering the files individually.
-          Then try the command with the text files in a different order.</p>
+          press Enter. Then try the command with the text files in a
+          different order.</p>
         <p>Can you stream the same file more than once in the same
           command? What happens if the output is too long for your
           terminal window? <br>
@@ -292,9 +290,9 @@
           this lesson using the <code>rm</code> and <code>rmdir</code>
           commands.</p>
         <p>Make sure you're in the "yetAnotherTest" directory. Then type
-          <code>rm loremIpsum.txt</code> and press Enter. Use <code>ls</code>
-          to see if the file is gone. Then use rm to delete all the
-          other files in the directory.</p>
+          rm loremIpsum.txt and press Enter. Use ls to see if the file
+          is gone. Then use rm to delete all the other files in the
+          directory.</p>
         <p>Now try to use <code>rmdir</code> to delete the "pleaseStop"
           and "really" directories. Does it work? In Bash you will get
           an error, but in PowerShell you are able to decide what to do
@@ -357,7 +355,6 @@
 
 
 
-
         ../..</code> to go back up twice with one command. We will
       practice this in the next checkpoint.</p>
     <p>Type <code>cd Mu</code> and press Tab. Bash should fill in the
@@ -374,7 +371,6 @@
       mkdir</h3>
     <p>This command creates a new directory inside your working
       directory. You should be in your home directory. If not, type <code>cd
-
 
 
 
@@ -414,7 +410,6 @@
       directories, one inside the other, at the same time. Now type <code>rmdir
 
 
-
         test</code> and see what happens.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
@@ -435,7 +430,6 @@
       directory and then use <code>popd</code> to move back. Try this
       at least three more times using different directories.</p>
     <p>Now, type <code>cd ~</code> and press Enter. Then type <code>pushd
-
 
 
         test/anotherTest/yetAnotherTest</code> and press Enter. Navigate
@@ -460,7 +454,6 @@
       and press Enter. Then confirm you created a new file by typing <code>ls
 
 
-
         test/anotherTest/yetAnotherTest/</code> and pressing Enter. You
       just created a file in a directory below your current working
       directory without actually moving there. Then you listed the
@@ -479,7 +472,6 @@
       howdy.txt - in the directory. You just copied the file and renamed
       it at the same time.</p>
     <p>Type <code>mkdir pleaseStop</code> and press Enter. Then type <code>cp
-
 
         hello.txt pleaseStop/</code> and press Enter. Now when you use <code>ls</code>
       you should see a new directory inside "yetAnotherTest".</p>
@@ -502,7 +494,6 @@
     <p>Make sure you are in the "yetAnotherTest" directory and type <code>mv
 
 
-
         test.txt whenWillThisEnd.txt</code> and press Enter. Then use <code>ls</code>
       to confirm that test.txt is now called whenWillThisEnd.txt
       instead.</p>
@@ -520,7 +511,6 @@
       especially files that are too long to fit into your terminal
       window.</p>
     <p>Use cd to move to the "yetAnotherTest" directory. Then type <code>curl
-
 
         -O</code> and the <a href="loremIpsum.txt">URL (link) of the
         loremIpsum.txt file</a> to download the file to the working
@@ -554,10 +544,9 @@
     <p>Now we're going to clean up our files and directories from this
       lesson using the <code>rm</code> and <code>rmdir</code>
       commands.</p>
-    <p>Make sure you're in the "yetAnotherTest" directory. Then type <code>rm
-        loremIpsum.txt</code> and press Enter. Use <code>ls</code> to
-      see if the file is gone. Then use rm to delete all the other files
-      in the directory.</p>
+    <p>Make sure you're in the "yetAnotherTest" directory. Then type rm
+      loremIpsum.txt and press Enter. Use ls to see if the file is gone.
+      Then use rm to delete all the other files in the directory.</p>
     <p>Now try to use <code>rmdir</code> to delete the "pleaseStop" and
       "really" directories. Does it work? In Bash you will get an error,
       but in PowerShell you are able to decide what to do with
