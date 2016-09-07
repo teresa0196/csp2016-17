@@ -36,6 +36,7 @@
       <li><a href="#mozTocId661152">Checkpoint 10: History</a></li>
       <li><a href="#mozTocId150669">Checkpoint 11: Oops...</a></li>
       <li><a href="#mozTocId627095">Checkpoint 12: Syncing</a></li>
+      <li><a href="#mozTocId211878">Checkpoint 13: Good Git Commits </a></li>
     </ul>
     <h2><a class="mozTocH2" name="mozTocId447212"></a>Checkpoint 1:
       Update Git</h2>
@@ -66,6 +67,14 @@
       this checkpoint.</p>
     <h2><a class="mozTocH2" name="mozTocId509786"></a>Checkpoint 3: Git
       Tutorials</h2>
+    <p>Watch the two videos below to learn what version control and Git
+      are conceptually (subtitles are available):</p>
+    <p><iframe src="https://www.youtube-nocookie.com/embed/8oRjP8yj2Wo"
+        allowfullscreen="" frameborder="0" height="450" width="800"></iframe>
+    </p>
+    <p><iframe src="https://www.youtube-nocookie.com/embed/uhtzxPU7Bz0"
+        allowfullscreen="" frameborder="0" height="450" width="800"></iframe>
+    </p>
     <p>Go to the <a href="http://git.rocks/getting-started/">Getting
         Started with Git tutorial</a> and complete it. Continue through
       all four tutorials until you are completely finished.</p>
@@ -78,6 +87,8 @@
       Then type <code>git init usingGit</code> and press Enter. You've
       just created a repository called "usingGit" on your computer.</p>
     <p>Make sure you're still in the "projects" directory and type <code>git
+
+
 
         clone git@github.com:seoul-christian-school/csp2016-17.git</code>
       and press Enter.</p>
@@ -136,13 +147,39 @@
       text to the file just like you did last time and save it. Then use
       <code>git add</code> and <code>git commit -m</code> to save the
       new file into Git. Then type <code>git checkout master</code> and
-      press Enter to switch back to the master branch.<br>
+      press Enter to switch back to the master branch.</p>
+    <p>Type <code>git merge special</code> and press Enter. This pulls
+      all the information you created in the "special" branch into the
+      "master" branch. If you visualize this, it is like a road that
+      goes from one lane to two lanes, and then back to one lane. The
+      information is split into two (or more branches) and then brought
+      back into one.<br>
     </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <h2><a class="mozTocH2" name="mozTocId223997"></a>Checkpoint 7:
       Delete and Rename</h2>
-    <p><br>
+    <p>You already know how to delete and rename files using <code>rm</code>
+      and <code>mv</code>. When you're working with files in Git, you <i>can</i>
+      use those tools, but it's better to use <code>git rm</code> and <code>git
+
+
+        mv</code> to save some steps.</p>
+    <p>Type <code>touch deleteThisFile.txt renameThisFile.txt</code>
+      and press Enter. Then type <code>git add *</code> to add all
+      untracked files to version control. Then use <code>git commit -m</code>
+      to save your changes.</p>
+    <p>Type <code>git rm deleteThisFile.txt</code> and press Enter.
+      This command both removes the file from the directory and also
+      tells Git about the change. Use <code>git status</code> to see
+      the effects of this command. If you just wanted to remove the file
+      from version control without deleting the file, you would use <code>git
+        rm --cached</code>.</p>
+    <p>Use <code>git commit -m</code> to save your changes.</p>
+    <p>Type <code>git mv renameThisFile.txt third.txt</code> and press
+      Enter. This renames the file and tells Git about the change. Use <code>git
+        status</code> to see the effects of this command.</p>
+    <p>Use <code>git commit -m</code> to save your changes.<br>
     </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
@@ -176,7 +213,8 @@
     </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <h2>Checkpoint 13: Good Git Commits<br>
+    <h2><a class="mozTocH2" name="mozTocId211878"></a>Checkpoint 13:
+      Good Git Commits<br>
     </h2>
     <p>There are seven rules for good Git commits. <a
         href="http://chris.beams.io/posts/git-commit/">Read this
