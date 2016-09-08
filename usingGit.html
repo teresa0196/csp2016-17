@@ -240,13 +240,54 @@
       this checkpoint.</p>
     <h2><a class="mozTocH2" name="mozTocId150669"></a>Checkpoint 11:
       Oops...</h2>
-    <p><br>
+    <p>Sometimes you'll make a mistake and not realize it until after
+      you commit. You have two options. You can reset the commit history
+      back to a chosen commit and preserve your files, or you can reset
+      back to a chosen commit and remove all the file changes since
+      then.</p>
+    <p>Go ahead and create several new text files, add them, and commit
+      them. Then edit the files using Vim so that all of the new files
+      contain different text. Then commit them.</p>
+    <p>Now use <code>git log</code> to pull up your commit history.
+      Choose the second-most-recent commit (yours will be different than
+      the example below) and highlight the commit ID. Then copy it.</p>
+    <img alt="Highlight and copy a commit ID" title="Highlight and copy
+      a commit ID" src="images/mintty_2016-09-09_08-19-20.png"
+      height="422" width="800">
+    <p>Now type <code>git reset</code> and paste in the commit ID you
+      just copied. This will undo your last commit but save the files
+      that you changed.</p>
+    <p>Now use <code>git log</code> to pull up your commit history.
+      Choose the second-most-recent commit and highlight the commit ID.
+      Then copy it.</p>
+    <p>Now type <code>git reset --hard</code> and paste in the commit
+      ID you just copied. This will undo the last commit and also remove
+      the files. Your directory should now appear as it did at the end
+      of Checkpoint 10.<br>
     </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <h2><a class="mozTocH2" name="mozTocId627095"></a>Checkpoint 12:
       Syncing</h2>
-    <p><br>
+    <p>When you're working with a remote repository, meaning one that is
+      hosted on a different computer than yours, you must sync it if you
+      want your changes to be reflected for other users. The two most
+      commonly used tools for syncing are git pull and git push.</p>
+    <p>Go to Github and find your username. Then send your username (not
+      your email) to Mr. Olinda via Slack so that you can be added to
+      the course repository. Once that is done, you can move on.<br>
+    </p>
+    <p>Change to the "csp2016-17" directory. Then type <code>git pull</code>.
+      You should see a number of changes added to your copy of the
+      repository. You are now synced with my copy of the course website.
+      In fact, you can open this lesson in your browser by going to the
+      directory in Windows Explorer or Finder and opening usingGit.html.</p>
+    <p>Now you should change to the usingGitPush subdirectory and create
+      a text file. The file should be yourName.txt, replacing yourName
+      with your name. Then add and commit the file, and type <code>git
+        push</code> and press Enter. If you get an error saying that you
+      are behind the current commit, then type <code>git pull --rebase</code>
+      and press Enter. Then type <code>git push</code> and press Enter.<br>
     </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
