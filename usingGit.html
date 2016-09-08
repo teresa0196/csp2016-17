@@ -197,6 +197,26 @@
       this checkpoint.</p>
     <h2><a class="mozTocH2" name="mozTocId922769"></a>Checkpoint 9:
       Stashing</h2>
+    <p>When you make changes to a repository, but you haven't committed
+      them yet, you can store the changes and changed (or even deleted)
+      files without deleting them permanently. This allows you to save
+      them to apply them later, even after another commit.</p>
+    <p>First, create three text files using <code>touch</code> and then
+      add them to Git. Now, if you use <code>git status</code> you'll
+      see the pending changes. But instead of using <code>git commit</code>,
+      type <code>git stash save</code>. You'll see a message explaining
+      where the files are located. Now use <code>ls</code> to verify
+      the new files aren't present. The directory should look just like
+      it did after your last commit. Type <code>git stash pop</code> to
+      bring the files back. Use <code>ls</code> to make sure it worked.</p>
+    <p>Then, add and commit the new files. Now use <code>git rm</code>
+      to delete all three files in one command. But before you commit,
+      use <code>git stash</code> (you don't have to type "save" at the
+      end) to save the changes in memory and restore the directory to
+      your last commit. Now, you should see the files back in place.
+      Using <code>git stash pop</code> will delete them again. Go ahead
+      and add and commit the changes.<br>
+    </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <h2><a class="mozTocH2" name="mozTocId661152"></a>Checkpoint 10:
@@ -215,8 +235,24 @@
       Good Git Commits </h2>
     <p>There are seven rules for good Git commits. <a
         href="http://chris.beams.io/posts/git-commit/">Read this
-        excellent explanation of the seven rules by Chris Beams</a> and
-      then move on to the content below.</p>
+        excellent explanation of the seven rules by Chris Beams</a>.
+      Basically, you need to make sure that your commits: <br>
+    </p>
+    <ol>
+      <li>Separate subject from body with a blank line</li>
+      <li>Limit the subject line to 50 characters</li>
+      <li>Capitalize the subject line</li>
+      <li>Do not end the subject line with a period</li>
+      <li>Use the imperative mood in the subject line</li>
+      <li>Wrap the body at 72 characters</li>
+      <li>Use the body to explain what and why vs. how</li>
+    </ol>
+    <p>Note that rules one, six, and seven only apply when you're
+      writing a commit message that has a body. Most of your commits
+      won't. Create a text file in your repository that contains the
+      seven rules and then add and commit it. Make sure your commit
+      message follows the seven rules exactly.<br>
+    </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <hr size="2" width="100%">
