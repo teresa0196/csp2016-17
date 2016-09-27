@@ -124,6 +124,7 @@
         <p>This command creates a new directory inside your working
           directory. You should be in your home directory. If not, type
           <code>cd ~</code> and press Enter to go there. Then type <code>mkdir
+
             test</code> and press Enter to create a directory called
           "test" inside your home directory. Then type <code>cd test</code>
           and press Enter to go down into the directory you just
@@ -321,7 +322,9 @@
     <p>This command is an abbreviation for "print working directory.
       This command shows you what directory (folder) you're in, which
       can be helpful if you are lost. Before you do anything else, just
-      type <code>pwd</code> at the prompt and press Enter. Do this thre</p>
+      type <code>pwd</code> at the prompt and press Enter. Do this
+      three times.<br>
+    </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <h3><a class="mozTocH3" name="mozTocId643106"></a>Checkpoint 15: cd</h3>
@@ -341,6 +344,7 @@
       current working directory is. It should be your home directory. If
       you're not sure, just type <code>pwd</code> and press Enter to
       check. If you went down another directory, you could type <code>cd
+
         ../..</code> to go back up twice with one command. We will
       practice this in the next checkpoint.</p>
     <p>Type <code>cd Mu</code> and press Tab. Bash should fill in the
@@ -356,6 +360,7 @@
       mkdir</h3>
     <p>This command creates a new directory inside your working
       directory. You should be in your home directory. If not, type <code>cd
+
         ~</code> and press Enter to go there. Then type <code>mkdir
         test</code> and press Enter to create a directory called "test"
       inside your home directory. Then type <code>cd test</code> and
@@ -389,6 +394,7 @@
       case, the <code>-p</code> flag allows us to create two
       directories, one inside the other, at the same time. Now type <code>rmdir
 
+
         test</code> and see what happens.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
@@ -408,6 +414,7 @@
       at least three more times using different directories.</p>
     <p>Now, type <code>cd ~</code> and press Enter. Then type <code>pushd
 
+
         test/anotherTest/yetAnotherTest</code> and press Enter. Navigate
       to any other directory besides "test" and then type <code>pushd</code>
       and press Enter.</p>
@@ -426,6 +433,7 @@
       type <code>touch test/anotherTest/yetAnotherTest/hello.txt</code>
       and press Enter. Then confirm you created a new file by typing <code>ls
 
+
         test/anotherTest/yetAnotherTest/</code> and pressing Enter. You
       just created a file in a directory below your current working
       directory without actually moving there. Then you listed the
@@ -442,6 +450,7 @@
       howdy.txt - in the directory. You just copied the file and renamed
       it at the same time.</p>
     <p>Type <code>mkdir pleaseStop</code> and press Enter. Then type <code>cp
+
 
         hello.txt pleaseStop/</code> and press Enter. Now when you use <code>ls</code>
       you should see a new directory inside "yetAnotherTest".</p>
@@ -460,6 +469,7 @@
       command to rename files, not actually move them to a new place. </p>
     <p>Make sure you are in the "yetAnotherTest" directory and type <code>mv
 
+
         test.txt whenWillThisEnd.txt</code> and press Enter. Then use <code>ls</code>
       to confirm that test.txt is now called whenWillThisEnd.txt
       instead. </p>
@@ -475,6 +485,7 @@
       especially files that are too long to fit into your terminal
       window. </p>
     <p>Use cd to move to the "yetAnotherTest" directory. Then type <code>curl
+
         -O</code> and the <a href="loremIpsum.txt">URL (link) of the
         loremIpsum.txt file</a> to download the file to the working
       directory. </p>
@@ -504,6 +515,7 @@
       lesson using the <code>rm</code> and <code>rmdir</code>
       commands. </p>
     <p>Make sure you're in the "yetAnotherTest" directory. Then type <code>rm
+
 
         loremIpsum.txt</code> and press Enter. Use <code>ls</code> to
       see if the file is gone. Then use rm to delete all the other files
