@@ -2,543 +2,148 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Using the Command Line</title>
+    <title>Writing in Markdown</title>
     <meta content="John Olinda" name="author">
-    <meta content="Students will learn how to use the basic features of
-      Powershell and Bash." name="description">
+    <meta content="Students will learn how to write in Markdown."
+      name="description">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>Using the Command Line</h1>
-    <p>Most of the time we are using computers and other electronic
-      devices, we are using what is known as a graphical user interface,
-      or GUI. These interfaces are a layer between the user - you - and
-      the machine. Before graphical user interfaces were common, most
-      machines were run using the command line. All three major
-      operating systems - Linux, Windows, and macOS - have a command
-      line, even though you don't have to use them. We are going to
-      practice using PowerShell and Bash. If you are using a Mac, you
-      will need to borrow a Windows computer to complete this
-      assignment. We will use our PocketCHIPs for the Bash practice.</p>
-    <p>This is a much longer lesson, so don't get frustrated if it takes
-      you longer than you think it should.</p>
+    <h1>Writing in Markdown<br>
+    </h1>
+    <p> Markdown is a markup system originally developed by John Gruber.
+      According to his website:<br>
+    </p>
+    <blockquote>
+      <p>Markdown is a text-to-HTML conversion tool for web writers.
+        Markdown allows you to write using an easy-to-read,
+        easy-to-write plain text format, then convert it to structurally
+        valid XHTML (or HTML).</p>
+      <p>Thus, “Markdown” is two things: (1) a plain text formatting
+        syntax; and (2) a software tool, written in Perl, that converts
+        the plain text formatting to HTML. See the Syntax page for
+        details pertaining to Markdown’s formatting syntax. You can try
+        it out, right now, using the online Dingus.</p>
+      <p>The overriding design goal for Markdown’s formatting syntax is
+        to make it as readable as possible. The idea is that a
+        Markdown-formatted document should be publishable as-is, as
+        plain text, without looking like it’s been marked up with tags
+        or formatting instructions. While Markdown’s syntax has been
+        influenced by several existing text-to-HTML filters, the single
+        biggest source of inspiration for Markdown’s syntax is the
+        format of plain text email.</p>
+    </blockquote>
+    <p>Markdown is used by many developers and writers, and it's a tool
+      you'll use throughout this year, especially in GitHub. You should
+      keep your Markdown reference card handy while you complete this
+      lesson.<br>
+    </p>
+    <p> </p>
     <ul id="mozToc">
       <!--mozToc h2 1 h3 2 h4 3 h5 4 h6 5-->
-      <li><a href="#mozTocId844421">PowerShell</a>
-        <ul>
-          <li><a href="#mozTocId390239">Checkpoint 1: pwd</a></li>
-          <li><a href="#mozTocId456761">Checkpoint 2: cd</a></li>
-          <li><a href="#mozTocId113707">Checkpoint 3: mkdir</a></li>
-          <li><a href="#mozTocId175105">Checkpoint 4: ls</a></li>
-          <li><a href="#mozTocId960713">Checkpoint 5: rmdir</a></li>
-          <li><a href="#mozTocId678629">Checkpoint 6: pushd, popd</a></li>
-          <li><a href="#mozTocId513639">Checkpoint 7: New-Item</a></li>
-          <li><a href="#mozTocId740790">Checkpoint 8: cp</a></li>
-          <li><a href="#mozTocId851765">Checkpoint 9: mv</a></li>
-          <li><a href="#mozTocId275220">Checkpoint 10: more</a></li>
-          <li><a href="#mozTocId236161">Checkpoint 11: cat</a></li>
-          <li><a href="#mozTocId736782">Checkpoint 12: rm</a></li>
-          <li><a href="#mozTocId763018">Checkpoint 13: exit</a></li>
-        </ul>
-      </li>
-      <li><a href="#mozTocId625745">Bash</a>
-        <ul>
-          <li><a href="#mozTocId799682">Checkpoint 14: pwd</a></li>
-          <li><a href="#mozTocId643106">Checkpoint 15: cd</a></li>
-          <li><a href="#mozTocId198645">Checkpoint 16: mkdir</a></li>
-          <li><a href="#mozTocId297610">Checkpoint 17: ls</a></li>
-          <li><a href="#mozTocId254558">Checkpoint 18: rmdir</a></li>
-          <li><a href="#mozTocId381126">Checkpoint 19: pushd, popd</a></li>
-          <li><a href="#mozTocId296991">Checkpoint 20: touch</a></li>
-          <li><a href="#mozTocId947988">Checkpoint 21: cp</a></li>
-          <li><a href="#mozTocId319241">Checkpoint 22: mv</a></li>
-          <li><a href="#mozTocId73089">Checkpoint 23: less</a></li>
-          <li><a href="#mozTocId456131">Checkpoint 24: cat</a></li>
-          <li><a href="#mozTocId368437">Checkpoint 25: rm</a></li>
-          <li><a href="#mozTocId719770">Checkpoint 26: exit</a></li>
-        </ul>
-      </li>
+      <li><a href="#mozTocId320173">Checkpoint 1: Markdown Tutorial </a></li>
+      <li><a href="#mozTocId452151">Checkpoint 2: txti </a></li>
+      <li><a href="#mozTocId961275">Checkpoint 3: Italics and Bold</a></li>
+      <li><a href="#mozTocId467959">Checkpoint 4: Lists</a></li>
+      <li><a href="#mozTocId621858">Checkpoint 5: Blockquotes</a></li>
+      <li><a href="#mozTocId18556">Checkpoint 6: Links and Images</a></li>
     </ul>
-    <h2><a class="mozTocH2" name="mozTocId844421"></a>PowerShell</h2>
-    <p>You must use a Windows computer for this part of the exercise, so
-      please let Mr. Olinda know if you need to borrow a school
-      computer. Open the Start Menu and search for <code>Windows
-        PowerShell</code>. It should be the first result, but make sure
-      you do not choose any options ending in ISE. You should see a
-      window that looks like this:</p>
-    <div align="center">
-      <p><img alt="Windows PowerShell Interface" title="Windows
-          PowerShell Interface"
-          src="images/powershell_2016-09-03_12-46-57.png" height="561"
-          width="800"></p>
-      <div align="left">
-        <p>Yours should show your user name instead of "John Olinda,"
-          but other than that it should appear identical. I'll refer to
-          the "prompt" throughout this lesson and throughout the course.
-          The PowerShell prompt ends in the &gt; symbol and indicates
-          that you can type commands. Sometimes I will ask you to clear
-          your terminal by typing <code>clear</code> and pressing
-          Enter. This will erase the content of the command line, but it
-          will not undo previous commands.</p>
-        <h3><a class="mozTocH3" name="mozTocId390239"></a>Checkpoint 1:
-          pwd</h3>
-        <p>This command is an abbreviation for "print working directory.
-          This command shows you what directory (folder) you're in,
-          which can be helpful if you are lost. Before you do anything
-          else, just type <code>pwd</code> at the prompt and press
-          Enter. Do this three times.</p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId456761"></a>Checkpoint 2:
-          cd</h3>
-        <p>This command is an abbreviation for "change directory." It
-          allows you to move from one directory (folder) to another in
-          the command line. It can also reset your working directory to
-          your home directory, which can be much faster than changing
-          directories one level at a time.</p>
-        <p>Type <code>cd</code> and press Enter. Notice that nothing
-          changed. This is because you just told the computer to change
-          to the current directory.</p>
-        <p>Type <code>cd Downloads</code> and press Enter. Check to see
-          if your prompt now includes the Downloads folder just before
-          the &gt; symbol. Now, any commands you execute will run in
-          this directory (folder) instead of your home directory.</p>
-        <p>Type <code>cd ..</code> and press Enter. Check to see what
-          your current working directory is. It should be your home
-          directory. If you're not sure, just type <code>pwd</code> and
-          press Enter to check. If you went down another directory, you
-          could type <code>cd ../..</code> to go back up twice with one
-          command. We will practice this in the next checkpoint.</p>
-        <p>Type <code>cd Mu</code> and press Tab. PowerShell should
-          fill in the missing letters and show <code>cd .\Music\</code>
-          instead. Now press Enter. When you're using the command line,
-          you can press Tab to autocomplete the command, directory, or
-          file that you are working on instead of typing the whole
-          command. </p>
-        <p>Next, type <code>cd ~</code> and notice that you're back in
-          your home directory.</p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId113707"></a>Checkpoint 3:
-          mkdir</h3>
-        <p>This command creates a new directory inside your working
-          directory. You should be in your home directory. If not, type
-          <code>cd ~</code> and press Enter to go there. Then type <code>mkdir
-
-            test</code> and press Enter to create a directory called
-          "test" inside your home directory. Then type <code>cd test</code>
-          and press Enter to go down into the directory you just
-          created. </p>
-        <p>Type <code>mkdir anotherTest</code> and press Enter to
-          create another directory inside the "test" directory. Then
-          type <code>cd anotherTest</code> and press Enter to go down
-          into this new directory.</p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId175105"></a>Checkpoint 4:
-          ls</h3>
-        <p>This command lists the files and directories inside the
-          current working directory. Type <code>cd ~</code> and press
-          Enter to go back to your home directory. Then type <code>ls</code>
-          and press Enter to see what's inside the directory.</p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId960713"></a>Checkpoint 5:
-          rmdir</h3>
-        <p>This command removes directories. Type <code>cd ~</code> and
-          press Enter to return to your home directory. Press Windows-E
-          and go to your home directory so you can see the changes you
-          make in PowerShell reflected in Windows Explorer. Then
-          navigate down to the "test" directory. Type <code>rmdir
-            anotherTest</code> and press Enter to delete the
-          "anotherTest" directory and then use <code>ls</code> to make
-          sure it has been deleted. Go back to your home directory and
-          delete the "test" directory. Use <code>ls</code> to make sure
-          you have removed it. When you check your home directory in
-          Windows Explorer you should see that both directories are
-          gone. </p>
-        <p>Now, type <code>mkdir -p test/anotherTest</code> (or on
-          Windows 8, <code>mkdir -Path test/anotherTest</code>) and
-          press Enter. The <code>-p</code> is what we call a flag and
-          it allows us to modify commands to do something slightly
-          different. In this case, the <code>-p</code> flag allows us
-          to create two directories, one inside the other, at the same
-          time. Now type <code>rmdir test</code> and see what happens.
-        </p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId678629"></a>Checkpoint 6:
-          pushd, popd</h3>
-        <p>These two commands allow you to quickly switch between
-          different directories. It works a little differently in
-          PowerShell than it will in Bash. </p>
-        <p>First, type <code>mkdir -p test/anotherTest/yetAnotherTest</code>
-          and press Enter. Then type <code>pushd
-            test/anotherTest/yetAnotherTest</code> and see what happens.
-          Confirm that you're in the "yetAnotherTest" directory with <code>pwd</code>.</p>
-        <p>Then type <code>popd</code> and press Enter. Now where are
-          you? Confirm this with <code>pwd</code>.</p>
-        <p>Use <code>ls</code> and <code>pushd</code> to move to
-          another directory and then use <code>popd</code> to move
-          back. Try this at least three more times using different
-          directories. </p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId513639"></a>Checkpoint 7:
-          New-Item</h3>
-        <p>This command allows you to create new files. First, use <code>cd</code>
-          to move to the "yetAnotherTest" directory. Once you get there,
-          type <code>New-Item test.txt</code> and press Enter. Confirm
-          you created a new file with <code>ls</code>.</p>
-        <p>Then go back to your home directory using <code>cd</code>
-          and type <code>New-Item
-            test/anotherTest/yetAnotherTest/hello.txt</code> and press
-          Enter. Then confirm you created a new file by typing <code>ls
-            test/anotherTest/yetAnotherTest/</code> and pressing Enter.
-          You just created a file in a directory below your current
-          working directory without actually moving there. Then you
-          listed the contents of that directory without moving. </p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId740790"></a>Checkpoint 8:
-          cp</h3>
-        <p>This command allows you to copy files and directories from
-          one place to another as well as within the same directory.
-          Files can be copied exactly or renamed when copied.</p>
-        <p>Move to the "yetAnotherTest" directory. Type <code>cp
-            hello.txt howdy.txt</code> and press Enter. Then use <code>ls</code>
-          to see if you now have three files - test.txt, hello.txt, and
-          howdy.txt - in the directory. You just copied the file and
-          renamed it at the same time.</p>
-        <p>Type <code>mkdir pleaseStop</code> and press Enter. Then
-          type <code>cp hello.txt pleaseStop/</code> and press Enter.
-          Now when you use <code>ls</code> you should see a new
-          directory inside "yetAnotherTest".<br>
-        </p>
-        <p>Type <code>cp -r pleaseStop really</code> (or on Windows 8,
-          type <code>cp -Recurse pleaseStop really</code>) and press
-          Enter. Then use <code>ls</code> to make sure that you can see
-          the "really" directory. You just copied a directory and its
-          contents to a new directory. The <code>-r</code> flag stands
-          for "recurse" which affects the directory and all of its
-          contents. </p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId851765"></a>Checkpoint 9:
-          mv</h3>
-        <p>This command is similar to <code>cp</code> except that
-          instead of copying the file, it moves the file to a new
-          location. However, just like <code>cp</code>, <code>mv</code>
-          can also rename files at the same time. In fact, most of the
-          time you will use this command to rename files, not actually
-          move them to a new place. </p>
-        <p>Make sure you are in the "yetAnotherTest" directory and type
-          <code>mv test.txt whenWillThisEnd.txt</code> and press Enter.
-          Then use <code>ls</code> to confirm that test.txt is now
-          called whenWillThisEnd.txt instead.</p>
-        <p>Now type <code>mv really yesReally</code> and press Enter.
-          You can use <code>ls</code> to make sure you've renamed the
-          directory correctly.</p>
-        <p>Now use <code>mv</code> to rename whenWillThisEnd.txt and
-          "yesReally" back to their original names. </p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId275220"></a>Checkpoint 10:
-          more</h3>
-        <p>This command is used to display the contents of a text file,
-          especially files that are too long to fit into your terminal
-          window. </p>
-        <p><a href="loremIpsum.txt">Download loremIpsum.txt</a> and save
-          it to your Downloads folder. Then use <code>cp</code> to
-          create a copy in the "yetAnotherTest" directory.</p>
-        <p>Then type <code>more loremIpsum.txt</code> and notice that
-          the whole file is displayed in your terminal window. If the
-          file was too long you could use the space bar to display the
-          next section until you had seen the whole file. This is called
-          paging. </p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId236161"></a>Checkpoint 11:
-          cat</h3>
-        <p>Unlike the last command, this one streams the file to your
-          terminal without any paging. But you can also stream multiple
-          files to your terminal. First, open "yetAnotherTest" in
-          Windows Explorer and add some text to each text file besides
-          loremIpsum.txt using your text editor. Save each file and then
-          move on.</p>
-        <p>Type <code>cat loremIpsum.txt</code> and press Enter.</p>
-        <p>Type <code>cat loremIpsum.txt hello.txt test.txt</code> and
-          press Enter. What happened? Try just typing <code>cat</code>
-          and then pressing Enter and entering the files individually.
-          Then try the command with the text files in a different order.</p>
-        <p>Can you stream the same file more than once in the same
-          command? What happens if the output is too long for your
-          terminal window? </p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId736782"></a>Checkpoint 12:
-          rm</h3>
-        <p>Now we're going to clean up our files and directories from
-          this lesson using the <code>rm</code> and <code>rmdir</code>
-          commands. </p>
-        <p>Make sure you're in the "yetAnotherTest" directory. Then type
-          <code>rm loremIpsum.txt</code> and press Enter. Use <code>ls</code>
-          to see if the file is gone. Then use rm to delete all the
-          other files in the directory.</p>
-        <p>Now try to use <code>rmdir</code> to delete the "pleaseStop"
-          and "really" directories. Does it work? In Bash you will get
-          an error, but in PowerShell you are able to decide what to do
-          with directories that aren't empty.</p>
-        <p>Now use <code>cd</code> to go to your home directory. Then
-          type <code>rm -r test</code> (remember to use <code>-Recurse</code>
-          instead of <code>-r</code> in Windows 8) in order to delete
-          the whole directory, including its contents.</p>
-        <p>Both commands can delete directories and files, but which one
-          do you use to delete files in the working directory? You
-          should always use <code>rm</code> and <code>rmdir</code>
-          very carefully since it's easy to damage your system by
-          accidentally deleting files. </p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-        <h3><a class="mozTocH3" name="mozTocId763018"></a>Checkpoint 13:
-          exit</h3>
-        <p>This command allows you to close the terminal. Type <code>exit</code>
-          and press Enter to close the terminal. </p>
-        <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-          this checkpoint.</p>
-      </div>
-    </div>
-    <h2><a class="mozTocH2" name="mozTocId625745"></a>Bash</h2>
-    <p>You must use a PocketCHIP for this part of the exercise, so
-      please ask for yours. Open the Terminal. You should see a black
-      screen that says <code>chip@chip:~$</code> and has a blinking
-      cursor. I'll refer to the "prompt" throughout this lesson and
-      throughout the course. The Bash prompt ends in the $ symbol and
-      indicates that you can type commands. Sometimes I will ask you to
-      clear your terminal by typing <code>clear</code> and pressing
-      Enter. This will erase the content of the command line, but it
-      will not undo previous commands.</p>
-    <h3><a class="mozTocH3" name="mozTocId799682"></a>Checkpoint 14: pwd</h3>
-    <p>This command is an abbreviation for "print working directory.
-      This command shows you what directory (folder) you're in, which
-      can be helpful if you are lost. Before you do anything else, just
-      type <code>pwd</code> at the prompt and press Enter. Do this
-      three times.<br>
+    <h2><a class="mozTocH2" name="mozTocId320173"></a>Checkpoint 1:
+      Markdown Tutorial<br>
+    </h2>
+    <p>Complete all eight lessons in the <a
+        href="http://www.markdowntutorial.com/">Markdown Tutorial</a>.<br>
     </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId643106"></a>Checkpoint 15: cd</h3>
-    <p>This command is an abbreviation for "change directory." It allows
-      you to move from one directory (folder) to another in the command
-      line. It can also reset your working directory to your home
-      directory, which can be much faster than changing directories one
-      level at a time.</p>
-    <p>Type <code>cd</code> and press Enter. Notice that nothing
-      changed. This is because you just told the computer to change to
-      the current directory.</p>
-    <p>Type <code>cd Downloads</code> and press Enter. Check to see if
-      your prompt now includes the Downloads folder just before the $
-      symbol. Now, any commands you execute will run in this directory
-      (folder) instead of your home directory.</p>
-    <p>Type <code>cd ..</code> and press Enter. Check to see what your
-      current working directory is. It should be your home directory. If
-      you're not sure, just type <code>pwd</code> and press Enter to
-      check. If you went down another directory, you could type <code>cd
-
-        ../..</code> to go back up twice with one command. We will
-      practice this in the next checkpoint.</p>
-    <p>Type <code>cd Mu</code> and press Tab. Bash should fill in the
-      missing letters and show <code>cd Music/</code> instead. Now
-      press Enter. When you're using the command line, you can press Tab
-      to autocomplete the command, directory, or file that you are
-      working on instead of typing the whole </p>
-    <p>Next, type <code>cd ~</code> and notice that you're back in your
-      home directory.</p>
+    <p> </p>
+    <h2><a class="mozTocH2" name="mozTocId452151"></a>Checkpoint 2: txti<br>
+    </h2>
+    <p>Although you can use any text editor to write Markdown, not all
+      editors can preview what it will look like when you're ready to
+      print or publish. So we will use a web service that will let you
+      see the results quickly so you can make changes and correct
+      mistakes.<br>
+    </p>
+    <p>Go to <a href="http://txti.es/">txti.es</a> in another tab. This
+      website allows you to publish extremely simple pages online using
+      Markdown. In the text box, type in the following text, including
+      the blank lines:</p>
+    <p><code># This is a heading</code><code><br>
+      </code><code><br>
+      </code><code>This is a paragraph. Paragraphs are awesome.</code><code><br>
+      </code><code><br>
+      </code><code>You can start a new paragraph by leaving a blank line
+        between lines of text.</code><code><br>
+      </code><code><br>
+      </code><code>If you don't leave a blank line</code><code><br>
+      </code><code>the next line will be a part of the same paragraph.</code></p>
+    <p>Your screen should look like this when you are done:</p>
+    <p align="center"><img alt=""
+        src="images/firefox_2016-09-29_11-53-50.png" height="571"
+        width="800"> </p>
+    <p>Go ahead and press <b>Save and done</b>. On the next screen it
+      will ask you for your email. Type in your school email address and
+      click <b>Email the below info</b>. Then open the page you just
+      created by clicking the viewing link.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId198645"></a>Checkpoint 16:
-      mkdir</h3>
-    <p>This command creates a new directory inside your working
-      directory. You should be in your home directory. If not, type <code>cd
-
-        ~</code> and press Enter to go there. Then type <code>mkdir
-        test</code> and press Enter to create a directory called "test"
-      inside your home directory. Then type <code>cd test</code> and
-      press Enter to go down into the directory you just created.</p>
-    <p>Type <code>mkdir anotherTest</code> and press Enter to create
-      another directory inside the "test" directory. Then type <code>cd
-        anotherTest</code> and press Enter to go down into this new
-      directory. </p>
+    <p> </p>
+    <h2><a class="mozTocH2" name="mozTocId961275"></a>Checkpoint 3:
+      Italics and Bold<br>
+    </h2>
+    <p>Go to the edit link for your page by adding <code>/edit</code>
+      at the end of the URL and pressing Enter. Make the first sentence
+      of the first paragraph italicized by putting underscores (the _
+      character) on either side of it. Make the second sentence of the
+      first paragraph bold by putting two asterisks (the * character) on
+      either side of it. Scroll to the bottom of the page and put in
+      your edit code that was emailed to you. Then press <b>Save and
+        done</b>.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId297610"></a>Checkpoint 17: ls</h3>
-    <p>This command lists the files and directories inside the current
-      working directory. Type <code>cd ~</code> and press Enter to go
-      back to your home directory. Then type <code>ls</code> and press
-      Enter to see what's inside the directory.</p>
+    <h2><a class="mozTocH2" name="mozTocId467959"></a>Checkpoint 4:
+      Lists</h2>
+    <p>Go to the edit link for your page by adding <code>/edit</code>
+      at the end of the URL and pressing Enter. Add an ordered list (a
+      list that is numbered) of five items to your website. Remember to
+      put the number at the very beginning of the line, followed by a
+      period and a space. It's better to start each list item with a <code>1.&nbsp;</code>
+      so that you can rearrange them later without having to change the
+      numbers.</p>
+    <p>Then create an unordered list (a list that uses bullet points) of
+      five items to your website. Remember to start each line with an
+      asterisk and a space. Scroll to the bottom of the page and put in
+      your edit code that was emailed to you. Then press <b>Save and
+        done</b>.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId254558"></a>Checkpoint 18:
-      rmdir</h3>
-    <p>This command removes directories. Type <code>cd ~</code> and
-      press Enter to return to your home directory. Then navigate down
-      to the "test" directory. Type <code>rmdir anotherTest</code> and
-      press Enter to delete the "anotherTest" directory and then use <code>ls</code>
-      to make sure it has been deleted. Go back to your home directory
-      and delete the "test" directory. Use <code>ls</code> to make sure
-      you have removed it. When you check your home directory in the
-      file browser you should see that both directories are gone.</p>
-    <p>Now, type <code>mkdir -p test/anotherTest</code> and press
-      Enter. The <code>-p</code> is what we call a flag and it allows
-      us to modify commands to do something slightly different. In this
-      case, the <code>-p</code> flag allows us to create two
-      directories, one inside the other, at the same time. Now type <code>rmdir
-
-
-        test</code> and see what happens.</p>
+    <h2><a class="mozTocH2" name="mozTocId621858"></a>Checkpoint 5:
+      Blockquotes</h2>
+    <p>Go to the edit link for your page by adding <code>/edit</code>
+      at the end of the URL and pressing Enter. Whenever you quote text
+      from another source in a web page, you should use the blockquote
+      tag. In Markdown, we indicate the start of a blockquote with the
+      &gt; symbol. Copy this paragraph into your page and add the &gt;
+      symbol and a space at the beginning of the paragraph. Scroll to
+      the bottom of the page and put in your edit code that was emailed
+      to you. Then press <b>Save and done</b>.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId381126"></a>Checkpoint 19:
-      pushd, popd</h3>
-    <p>These two commands allow you to quickly switch between different
-      directories. It works a little differently in Bash than in
-      PowerShell. </p>
-    <p>First, type <code>mkdir -p test/anotherTest/yetAnotherTest</code>
-      and press Enter. Then type <code>pushd
-        test/anotherTest/yetAnotherTest</code> and see what happens.
-      Confirm that you're in the "yetAnotherTest" directory with <code>pwd</code>.</p>
-    <p>Then type <code>popd</code> and press Enter. Now where are you?
-      Confirm this with <code>pwd</code>.</p>
-    <p>Use <code>ls</code> and <code>pushd</code> to move to another
-      directory and then use <code>popd</code> to move back. Try this
-      at least three more times using different directories.</p>
-    <p>Now, type <code>cd ~</code> and press Enter. Then type <code>pushd
-
-
-        test/anotherTest/yetAnotherTest</code> and press Enter. Navigate
-      to any other directory besides "test" and then type <code>pushd</code>
-      and press Enter.</p>
-    <p>When you run a command all by itself, you're running it without
-      any arguments. What happened when you ran <code>pushd</code>
-      without any arguments? </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-      this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId296991"></a>Checkpoint 20:
-      touch</h3>
-    <p>This command allows you to create new files. First, use <code>cd</code>
-      to move to the "yetAnotherTest" directory. Once you get there,
-      type <code>touch test.txt</code> and press Enter. Confirm you
-      created a new file with <code>ls</code>.</p>
-    <p>Then go back to your home directory using <code>cd</code> and
-      type <code>touch test/anotherTest/yetAnotherTest/hello.txt</code>
-      and press Enter. Then confirm you created a new file by typing <code>ls
-
-
-        test/anotherTest/yetAnotherTest/</code> and pressing Enter. You
-      just created a file in a directory below your current working
-      directory without actually moving there. Then you listed the
-      contents of that directory without moving.</p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-      this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId947988"></a>Checkpoint 21: cp</h3>
-    <p>This command allows you to copy files and directories from one
-      place to another as well as within the same directory. Files can
-      be copied exactly or renamed when copied.</p>
-    <p>Move to the "yetAnotherTest" directory. Type <code>cp hello.txt
-        howdy.txt</code> and press Enter. Then use <code>ls</code> to
-      see if you now have three files - test.txt, hello.txt, and
-      howdy.txt - in the directory. You just copied the file and renamed
-      it at the same time.</p>
-    <p>Type <code>mkdir pleaseStop</code> and press Enter. Then type <code>cp
-
-
-        hello.txt pleaseStop/</code> and press Enter. Now when you use <code>ls</code>
-      you should see a new directory inside "yetAnotherTest".</p>
-    <p>Type <code>cp -r pleaseStop really</code> and press Enter. Then
-      use <code>ls</code> to make sure that you can see the "really"
-      directory. You just copied a directory and its contents to a new
-      directory. The <code>-r</code> flag stands for "recurse" which
-      affects the directory and all of its contents.</p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-      this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId319241"></a>Checkpoint 22: mv</h3>
-    <p>This command is similar to <code>cp</code> except that instead
-      of copying the file, it moves the file to a new location. However,
-      just like <code>cp</code>, <code>mv</code> can also rename files
-      at the same time. In fact, most of the time you will use this
-      command to rename files, not actually move them to a new place. </p>
-    <p>Make sure you are in the "yetAnotherTest" directory and type <code>mv
-
-
-        test.txt whenWillThisEnd.txt</code> and press Enter. Then use <code>ls</code>
-      to confirm that test.txt is now called whenWillThisEnd.txt
-      instead. </p>
-    <p>Now type <code>mv really yesReally</code> and press Enter. You
-      can use <code>ls</code> to make sure you've renamed the directory
-      correctly. </p>
-    <p>Now use <code>mv</code> to rename whenWillThisEnd.txt and
-      "yesReally" back to their original names.</p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-      this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId73089"></a>Checkpoint 23: less</h3>
-    <p>This command is used to display the contents of a text file,
-      especially files that are too long to fit into your terminal
-      window. </p>
-    <p>Use cd to move to the "yetAnotherTest" directory. Then type <code>curl
-
-        -O</code> and the <a href="loremIpsum.txt">URL (link) of the
-        loremIpsum.txt file</a> to download the file to the working
-      directory. </p>
-    <p>Then type <code>less loremIpsum.txt</code> and notice that the
-      whole file is too large to display in your terminal window. Use
-      the space bar to display the next section until you have seen the
-      whole file. This is called paging.</p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-      this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId456131"></a>Checkpoint 24: cat</h3>
-    <p>Unlike the last command, this one streams the file to your
-      terminal without any paging. But you can also stream multiple
-      files to your terminal. First, press the Home button and open
-      "yetAnotherTest" in the Browse Files application and add some text
-      to each text file besides loremIpsum.txt using your text editor.
-      Save each file and then move on.</p>
-    <p>Type <code>cat loremIpsum.txt</code> and press Enter.</p>
-    <p>Type <code>cat loremIpsum.txt hello.txt test.txt</code> and
-      press Enter. Then try the command with the text files in a
-      different order.</p>
-    <p>Can you stream the same file more than once in the same command?
-      What happens if the output is too long for your terminal window?</p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-      this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId368437"></a>Checkpoint 25: rm</h3>
-    <p>Now we're going to clean up our files and directories from this
-      lesson using the <code>rm</code> and <code>rmdir</code>
-      commands. </p>
-    <p>Make sure you're in the "yetAnotherTest" directory. Then type <code>rm
-
-
-        loremIpsum.txt</code> and press Enter. Use <code>ls</code> to
-      see if the file is gone. Then use rm to delete all the other files
-      in the directory.</p>
-    <p>Now try to use <code>rmdir</code> to delete the "pleaseStop" and
-      "really" directories. Does it work? In Bash you will get an error,
-      but in PowerShell you are able to decide what to do with
-      directories that aren't empty.</p>
-    <p>Now use <code>cd</code> to go to your home directory. Then type
-      <code>rm -rf test</code> in order to delete the whole directory,
-      including its contents. The <code>-f</code> flag means "force"
-      which deletes the directory even if there are things inside it. </p>
-    <p>Both commands can delete directories and files, but which one do
-      you use to delete files in the working directory? You should
-      always use <code>rm</code> and <code>rmdir</code> very carefully
-      since it's easy to damage your system by accidentally deleting
-      files. </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
-      this checkpoint.</p>
-    <h3><a class="mozTocH3" name="mozTocId719770"></a>Checkpoint 26:
-      exit</h3>
-    <p>This command allows you to close the terminal. Type <code>exit</code>
-      and press Enter to close the terminal. </p>
+    <h2><a class="mozTocH2" name="mozTocId18556"></a>Checkpoint 6: Links
+      and Images</h2>
+    <p></p>
+    <p>Go to the edit link for your page by adding <code>/edit</code>
+      at the end of the URL and pressing Enter. To create a link to
+      another page, you surround the text you want linked with [ and ]
+      and the actual link with ( and ). Create a link to this page in
+      your website.</p>
+    <p>To add images, we use the same syntax as with links, except you
+      put a ! in front of the [link text] to tell the computer it is an
+      image, not a traditional link. Go ahead and copy the link to the
+      picture in Checkpoint 2 and then insert it into your website.
+      Scroll to the bottom of the page and put in your edit code that
+      was emailed to you. Then press <b>Save and done</b>.</p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <hr size="2" width="100%">
