@@ -87,6 +87,7 @@
       created a repository called "usingGit" on your computer.</p>
     <p>Make sure you're still in the "projects" directory and type <code>git
 
+
         clone git@github.com:seoul-christian-school/csp2016-17.git</code>
       and press Enter.</p>
     <p>Then use <code>cd</code> and <code>ls</code> to check out the
@@ -158,6 +159,7 @@
       and <code>mv</code>. When you're working with files in Git, you <i>can</i>
       use those tools, but it's better to use <code>git rm</code> and <code>git
 
+
         mv</code> to save some steps.</p>
     <p>Type <code>touch deleteThisFile.txt renameThisFile.txt</code>
       and press Enter. Then type <code>git add *</code> to add all
@@ -169,10 +171,12 @@
       the effects of this command. If you just wanted to remove the file
       from version control without deleting the file, you would use <code>git
 
+
         rm --cached</code>.</p>
     <p>Use <code>git commit -m</code> to save your changes.</p>
     <p>Type <code>git mv renameThisFile.txt third.txt</code> and press
       Enter. This renames the file and tells Git about the change. Use <code>git
+
 
         status</code> to see the effects of this command.</p>
     <p>Use <code>git commit -m</code> to save your changes. </p>
@@ -272,18 +276,20 @@
     <p>When you're working with a remote repository, meaning one that is
       hosted on a different computer than yours, you must sync it if you
       want your changes to be reflected for other users. The two most
-      commonly used tools for syncing are git pull and git push.</p>
+      commonly used tools for syncing are <code>git pull</code> and <code>git
+        push</code>.</p>
     <p>Change to the "csp2016-17" directory. Then type <code>git pull</code>.
       You should see a number of changes added to your copy of the
       repository. You are now synced with my copy of the course website.
       In fact, you can open this lesson in your browser by going to the
       directory in Windows Explorer or Finder and opening usingGit.html.</p>
-    <p>Now you should change to the usingGitPush subdirectory and create
-      a text file. The file should be yourName.txt, replacing yourName
-      with your name. Then add and commit the file, and type <code>git
-        push</code> and press Enter. If you get an error saying that you
-      are behind the current commit, then type <code>git pull --rebase</code>
-      and press Enter. Then type <code>git push</code> and press Enter.<br>
+    <p>Now you should change to the "usingGitPush" subdirectory and
+      create a text file. The file should be yourName.txt, replacing
+      "yourName" with your name. Then add and commit the file, and type
+      <code>git push</code> and press Enter. If you get an error saying
+      that you are behind the current commit, then type <code>git pull
+        --rebase</code> and press Enter. Then type <code>git push</code>
+      and press Enter.<br>
     </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
@@ -305,16 +311,28 @@
     </ol>
     <p>Note that rules one, six, and seven only apply when you're
       writing a commit message that has a body. Most of your commits
-      won't. Create a text file in your "usingGit" repository that contains the
-      seven rules and then add and commit it. Make sure your commit
-      message follows the seven rules exactly.<br>
+      won't. Create a text file in your "usingGit" repository that
+      contains the seven rules and then add and commit it. Make sure
+      your commit message follows the seven rules exactly.<br>
     </p>
     <p class="checkpoint">Raise your hand and have Mr. Olinda verify
       this checkpoint.</p>
     <hr size="2" width="100%">
     <p><strong>Turn in your checkpoint sheet to the assignment basket
         once it is completely signed. You may now work on stretch
-        projects. </strong></p>
-    <strong> </strong>
+        projects.</strong><strong></strong><br>
+    </p>
+    <h2>Study Tips</h2>
+    <ul>
+      <li>Understand how to produce a specific result using general
+        instructions.</li>
+      <li>Know the seven rules of a good git commit from memory and be
+        able to generate good Git commits.<br>
+      </li>
+      <li>Understand the <i>best</i> way to accomplish a task in Git,
+        even when there is another solution using Bash or PowerShell
+        commands.<br>
+      </li>
+    </ul>
   </body>
 </html>
