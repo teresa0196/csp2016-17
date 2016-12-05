@@ -94,7 +94,7 @@
         <li>
           <form class="quiz">
             <p><label>Pudding is not both good and fattening.</label></p>
-            <p><input pattern="~&#40;G&amp;F&#41;"></p>
+            <p><input pattern="~\(G&amp;F\)"></p>
           </form>
         </li>
         <li>
@@ -106,7 +106,7 @@
         <li>
           <form class="quiz">
             <p><label>Pudding is not either good or fattening.</label></p>
-            <p><input pattern="~&#40;GvF&#41;"></p>
+            <p><input pattern="~\(GvF\)"></p>
           </form>
         </li>
         <li>
@@ -118,7 +118,7 @@
         <li>
           <form class="quiz">
             <p><label>Pudding is neither good nor fattening.</label></p>
-            <p><input pattern="~&#40;GvF&#41;"></p>
+            <p><input pattern="~\(GvF\)"></p>
           </form>
         </li>
       </ol>
@@ -133,8 +133,8 @@
       Truth Functions</h2>
     <p>Read pages 9-10 of Chapter 1 before completing the exercise.</p>
     <blockquote>
-      <p><b>Exercise 1-3:</b> Try to explain what it would be for a declarative compound sentence in English not to be truth functional. Give an example of a declarative compound sentence in English that is not truth functional. &#40;There are lots of them!
-        You may find this exercise hard. Please try it, but don't get alarmed if you have trouble.&#41;<br>
+      <p><b>Exercise 1-3:</b> Try to explain what it would be for a declarative compound sentence in English not to be truth functional. Give an example of a declarative compound sentence in English that is not truth functional. (There are lots of them!
+        You may find this exercise hard. Please try it, but don't get alarmed if you have trouble.)<br>
       </p>
     </blockquote>
     <p>Your answer should be developed in writing and must be complete, simple, and concise. You will not move on to the next checkpoint unless your answer addresses each part of the exercise. When you are ready, post your answer on your blog. </p>
@@ -157,7 +157,7 @@
               </b></td>
           </tr>
           <tr>
-            <td align="center" valign="top">~&#40;Av~B&#41;<br>
+            <td align="center" valign="top">~(Av~B)<br>
             </td>
             <td align="center" valign="top">~<br>
             </td>
@@ -185,19 +185,19 @@
       <ol>
         <li>
           <form class="quiz">
-            <p><label>&#40;D&amp;~G&#41;v&#40;G&amp;D&#41;</label></p>
+            <p><label>(D&amp;~G)v(G&amp;D)</label></p>
             <p><input pattern="G&amp;D"></p>
           </form>
         </li>
         <li>
           <form class="quiz">
-            <p><label>[&#40;Dv~~B&#41;&amp;&#40;DvB&#41;]&amp;&#40;DvB&#41;</label></p>
+            <p><label>[(Dv~~B)&amp;(DvB)]&amp;(DvB)</label></p>
             <p><input pattern="DvB"></p>
           </form>
         </li>
         <li>
           <form class="quiz">
-            <p><label>L&amp;{Mv[~N&amp;&#40;Mv~L&#41;]}</label></p>
+            <p><label>L&amp;{Mv[~N&amp;(Mv~L)]}</label></p>
             <p><input pattern="~L"></p>
           </form>
         </li>
@@ -214,10 +214,10 @@
       <ol>
         <li>A&amp;~B</li>
         <li>A~&amp;B</li>
-        <li>Gv&#40;~B&amp;~H&#41;</li>
-        <li>A&amp;&#40;C&amp;~&#40;DvH&#41;&#41;</li>
-        <li>&#40;A&amp;B&#41;v&#40;C&amp;D&#41;</li>
-        <li>&#40;AvB&#41;&amp;CvD</li>
+        <li>Gv(~B&amp;~H)</li>
+        <li>A&amp;(C&amp;~(DvH))</li>
+        <li>(A&amp;B)v(C&amp;D)</li>
+        <li>(AvB)&amp;CvD</li>
       </ol>
     </blockquote>
     <p>Your answer should be developed in writing and must be complete, simple, and concise. You will not move on to the next checkpoint unless your answer addresses each part of the exercise. When you are ready, post your answer on your blog. </p>
@@ -279,13 +279,13 @@
       </table>
       <ol>
         <li>~BvA</li>
-        <li>~&#40;BvA&#41;</li>
-        <li>&#40;QvT&#41;&amp;&#40;~Qv~T&#41;</li>
-        <li>&#40;D&amp;~G&#41;v&#40;G&amp;D&#41;</li>
-        <li>Av&#40;~BvC&#41;</li>
-        <li>Kv[~P&amp;&#40;~PvM&#41;]</li>
-        <li>[&#40;Dv~~B&#41;&amp;&#40;Dv~B&#41;]&amp;&#40;DvB&#41;</li>
-        <li>L&amp;{Mv[~N&amp;&#40;~Mv~L&#41;]}<br>
+        <li>~(BvA)</li>
+        <li>(QvT)&amp;(~Qv~T)</li>
+        <li>(D&amp;~G)v(G&amp;D)</li>
+        <li>Av(~BvC)</li>
+        <li>Kv[~P&amp;(~PvM)]</li>
+        <li>[(Dv~~B)&amp;(Dv~B)]&amp;(DvB)</li>
+        <li>L&amp;{Mv[~N&amp;(~Mv~L)]}<br>
         </li>
       </ol>
     </blockquote>
@@ -303,9 +303,9 @@
     <p><b>AND True?</b></p>
     <p>True and False ☞ False<br> True and True ☞ True<br> False and True ☞ False<br> False and False ☞ False</p>
     <p><b>NOT OR True?</b></p>
-    <p>not &#40;True or False&#41; ☞ False<br> not &#40;True or True&#41; ☞ False<br> not &#40;False or True&#41; ☞ False<br> not &#40;False or False&#41; ☞ True</p>
+    <p>not (True or False) ☞ False<br> not (True or True) ☞ False<br> not (False or True) ☞ False<br> not (False or False) ☞ True</p>
     <p><b>NOT AND True?</b></p>
-    <p>not &#40;True and False&#41; ☞ True<br> not &#40;True and True&#41; ☞ False<br> not &#40;False and True&#41; ☞ True<br> not &#40;False and False&#41; ☞ True</p>
+    <p>not (True and False) ☞ True<br> not (True and True) ☞ False<br> not (False and True) ☞ True<br> not (False and False) ☞ True</p>
     <p><b>!= True?</b></p>
     <p>1 != 0 ☞ True<br> 1 != 1 ☞ False<br> 0 != 1 ☞ True<br> 0 != 0 ☞ False</p>
     <p><b>== True?</b></p>
