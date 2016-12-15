@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Using Git</title>
+    <meta content="John Olinda" name="author">
+    <meta content="Students will learn how to use Git according to best
+      practices." name="description">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <h1>Git 사용하기</h1>
+    <p>Git은 버전 관리 시스템의 종류입니다. 우리는 프로그램의 변경 사항을 추적We use version control systems to help us track the changes to programs, documents, and other forms of information. This allows us to undo mistakes in our work and preserve the history of our information if
+      we need to refer to it. Git is also the foundation for collaborative software development sites like Github, Gitlab, and BitBucket.</p>
+    <p>We're going to learn how to properly use Git from the command line. Get out your Git Cheat Sheet and highlight the following commands since you'll use them all the time: <code>git pull</code>,
+      <code>git add</code>, <code>git commit</code>, and <code>git
+        push</code>.</p>
+    <ul id="mozToc">
+      <!--mozToc h2 1 h3 2 h4 3 h5 4 h6 5-->
+      <li><a href="#mozTocId447212">Checkpoint 1: Update Git</a></li>
+      <li><a href="#mozTocId275915">Checkpoint 2: Configure Git</a></li>
+      <li><a href="#mozTocId509786">Checkpoint 3: Git Tutorials</a></li>
+      <li><a href="#mozTocId569043">Checkpoint 4: Create a Repository</a></li>
+      <li><a href="#mozTocId151831">Checkpoint 5: Make Changes</a></li>
+      <li><a href="#mozTocId962838">Checkpoint 6: Branching</a></li>
+      <li><a href="#mozTocId223997">Checkpoint 7: Delete and Rename</a></li>
+      <li><a href="#mozTocId728930">Checkpoint 8: gitignore</a></li>
+      <li><a href="#mozTocId922769">Checkpoint 9: Stashing</a></li>
+      <li><a href="#mozTocId661152">Checkpoint 10: History</a></li>
+      <li><a href="#mozTocId150669">Checkpoint 11: Oops...</a></li>
+      <li><a href="#mozTocId627095">Checkpoint 12: Syncing</a></li>
+      <li><a href="#mozTocId211878">Checkpoint 13: Good Git Commits </a></li>
+      <li><a href="#mozTocId965240">Study Tips</a></li>
+    </ul>
+    <h2><a class="mozTocH2" name="mozTocId447212"></a>Checkpoint 1:
+      Update Git</h2>
+    <p>Go to the Git website and download the latest version. Install it using the default settings.</p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId275915"></a>Checkpoint 2:
+      Configure Git</h2>
+    <p>Although you've already configured Git for this class, go ahead and double-check your settings.</p>
+    <p>Type <code>git config --global user.name "Your Name"</code>, replacing "Your Name" with your actual first and last name. Then press Enter. This helps other developers know who made the changes in the Git repository. </p>
+    <p>Type <code>git config --global user.email
+        "yourname@seoulchristian.org"</code>, replacing "yourname@seoulchristian.org" with your school email address. Then press Enter. This helps other developers know where to contact you. </p>
+    <p>Type <code>git config --global color.ui auto</code> and press Enter. This adds some color to the command line output to help you read it more easily.</p>
+    <p>Then type <code>git config --list</code> and press Enter to make sure you've set everything properly.</p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId509786"></a>Checkpoint 3: Git
+      Tutorials</h2>
+    <p>Watch the two videos below to learn what version control and Git are conceptually (subtitles are available):</p>
+    <p><iframe src="https://www.youtube-nocookie.com/embed/8oRjP8yj2Wo" allowfullscreen="" frameborder="0" height="450" width="800"></iframe>
+    </p>
+    <p><iframe src="https://www.youtube-nocookie.com/embed/uhtzxPU7Bz0" allowfullscreen="" frameborder="0" height="450" width="800"></iframe>
+    </p>
+    <p>Go to the <a href="http://git.rocks/getting-started/">Getting
+        Started with Git tutorial</a> and complete it. Continue through all the tutorials.</p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId569043"></a>Checkpoint 4:
+      Create a Repository</h2>
+    <p>Now we're going to try this for real. Open Git Bash (or Terminal on Mac) and type <code>mkdir projects</code> and press Enter. Then use <code>cd</code> to enter the "projects" directory and type <code>git init usingGit</code> and press Enter. You've
+      just created a repository called "usingGit" on your computer.</p>
+    <p>Make sure you're still in the "projects" directory and type <code>git
+        clone git@github.com:seoul-christian-school/csp2016-17.git</code> and press Enter.</p>
+    <p>Then use <code>cd</code> and <code>ls</code> to check out the contents of both the "usingGit" and "csp2016-17" directories. What is in each one?</p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId151831"></a>Checkpoint 5: Make
+      Changes</h2>
+    <p>In Git Bash, go to your "usingGit" repository. Type git status and press Enter. You should see a message telling you there are no changes. Now type <code>touch first.txt</code> and press Enter. Then type <code>vim first.txt</code> and press Enter.
+      You'll now see a different interface. This is the Vim text editor installed on almost every Unix or Linux machine. Another one you might see is Nano. To edit the file, you need to change to "insert" mode by pressing the letter i on your keyboard.</p>
+    <p>Now that you're in insert mode, type <code>Here is some text.</code> into the file. Then press Escape on your keyboard to go back to normal mode. Then type <code>:wq</code> and press Enter to save (write) your changes and quit Vim.</p>
+    <p>Now type <code>git status</code> and press Enter. You should see something similar to this:</p>
+    <div align="center"><img alt="The output of git status." title="The
+        output of git status." src="images/mintty_2016-09-07_15-42-59.png" height="422" width="800"> </div>
+    <p>You'll notice that it gives you instructions on what to do next. Go ahead and type <code>git add first.txt</code> and press Enter to add the file to version control. Then use <code>git status</code> again to see what's changed.</p>
+    <p>Then type <code>git commit -m "Add first.txt to version control"</code> and press Enter. This records the current version of the file in Git. The <code>-m</code> flag tells Git you are going to type a message after the command. If you don't use the
+      <code>-m</code> flag then it will bring up a Vim window where you can type your message. </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId962838"></a>Checkpoint 6:
+      Branching</h2>
+    <p>Sometimes we need to work on certain parts of a project without disturbing the master version, which is called the "master branch" in Git. To do that, simply type <code>git branch special</code> and press Enter. Now type <code>git branch</code> to
+      see the branches in your repository. The one you're currently on is green.</p>
+    <p>Now type <code>git checkout special</code> and press Enter to switch the the special branch. Use git branch again to see what's changed. </p>
+    <img alt="Git checkout changes." title="Git checkout changes." src="images/mintty_2016-09-07_16-20-35.png" height="422" width="800">
+    <p>Now, type <code>vim second.txt</code> and press Enter. Add some text to the file just like you did last time and save it. Then use
+      <code>git add</code> and <code>git commit -m</code> to save the new file into Git. Then type <code>git checkout master</code> and press Enter to switch back to the master branch.</p>
+    <p>Type <code>git merge special</code> and press Enter. This pulls all the information you created in the "special" branch into the "master" branch. If you visualize this, it is like a road that goes from one lane to two lanes, and then back to one lane.
+      The information is split into two (or more branches) and then brought back into one. </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId223997"></a>Checkpoint 7:
+      Delete and Rename</h2>
+    <p>You already know how to delete and rename files using <code>rm</code> and <code>mv</code>. When you're working with files in Git, you <i>can</i> use those tools, but it's better to use <code>git rm</code> and <code>git
+
+
+        mv</code> to save some steps.</p>
+    <p>Type <code>touch deleteThisFile.txt renameThisFile.txt</code> and press Enter. Then type <code>git add *</code> to add all untracked files to version control. Then use <code>git commit -m</code> to save your changes.</p>
+    <p>Type <code>git rm deleteThisFile.txt</code> and press Enter. This command both removes the file from the directory and also tells Git about the change. Use <code>git status</code> to see the effects of this command. If you just wanted to remove the
+      file from version control without deleting the file, you would use <code>git
+
+
+        rm --cached</code>.</p>
+    <p>Use <code>git commit -m</code> to save your changes.</p>
+    <p>Type <code>git mv renameThisFile.txt third.txt</code> and press Enter. This renames the file and tells Git about the change. Use <code>git
+
+
+        status</code> to see the effects of this command.</p>
+    <p>Use <code>git commit -m</code> to save your changes. </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId728930"></a>Checkpoint 8:
+      gitignore</h2>
+    <p>Git can be configured to ignore certain files, types of files, or directories. This can be helpful if you're working on a group project and are keeping notes in the directory that aren't going to help other users. You need it, but other people don't,
+      so you configure Git to ignore it.</p>
+    <p>First, create a new file called "ignore.txt" in your "usingGit" directory. Then type <code>vim .gitignore</code> and press Enter. Once you're in Vim, press i to enter the editing mode and type <code>ignore.txt</code>. Then press Escape and type <code>:wq</code>      and press Enter to save and quit Vim. Now, when you use git status, you should only see the new .gitignore file to be added. Use <code>git add</code> to track this file and then commit it.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId922769"></a>Checkpoint 9:
+      Stashing</h2>
+    <p>When you make changes to a repository, but you haven't committed them yet, you can store the changes and changed (or even deleted) files without deleting them permanently. This allows you to save them to apply them later, even after another commit.</p>
+    <p>First, create three text files using <code>touch</code> and then add them to Git. Now, if you use <code>git status</code> you'll see the pending changes. But instead of using <code>git commit</code>, type <code>git stash save</code>. You'll see a
+      message explaining where the files are located. Now use <code>ls</code> to verify the new files aren't present. The directory should look just like it did after your last commit. Type <code>git stash pop</code> to bring the files back. Use <code>ls</code>      to make sure it worked.</p>
+    <p>Then, add and commit the new files. Now use <code>git rm</code> to delete all three files in one command. But before you commit, use <code>git stash</code> (you don't have to type "save" at the end) to save the changes in memory and restore the directory
+      to your last commit. Now, you should see the files back in place. Using <code>git stash pop</code> will delete them again. Go ahead and add and commit the changes.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId661152"></a>Checkpoint 10:
+      History</h2>
+    <p>Especially when you're working with other people, it is important to find out when certain changes were made and who made them. This is when you use <code>git log</code>.</p>
+    <p>Type <code>git log</code> and press Enter to see what happens. The output is "piped" into less, so you can scroll through it with the Space Bar and press q to quit. All the commits should be by you, of course.</p>
+    <p>Now, type <code>git log --grep=</code> and add a search word. Grep is a search tool used in Unix and Linux systems. If any commits match that word, they will appear when you press Enter. Now figure out how to search for more than one word at a time.
+      Then type <code>git log --help</code> and press Enter to open the manual page in your browser. Try at least two other options for searching through the history of your repository.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId150669"></a>Checkpoint 11:
+      Oops...</h2>
+    <p>Sometimes you'll make a mistake and not realize it until after you commit. You have two options. You can reset the commit history back to a chosen commit and preserve your files, or you can reset back to a chosen commit and remove all the file changes
+      since then.
+    </p>
+    <p>Go ahead and create several new text files, add them, and commit them. Then edit the files using Vim so that all of the new files contain different text. Then commit them.</p>
+    <p>Now use <code>git log</code> to pull up your commit history. Choose the second-most-recent commit (yours will be different than the example below) and highlight the commit ID. Then copy it.</p>
+    <img alt="Highlight and copy a commit ID" title="Highlight and copy
+      a commit ID" src="images/mintty_2016-09-09_08-19-20.png" height="422" width="800">
+    <p>Now type <code>git reset</code> and paste in the commit ID you just copied. This will undo your last commit but save the files that you changed.</p>
+    <p>Now use <code>git log</code> to pull up your commit history. Choose the second-most-recent commit and highlight the commit ID. Then copy it.</p>
+    <p>Now type <code>git reset --hard</code> and paste in the commit ID you just copied. This will undo the last commit and also remove the files. Your directory should now appear as it did at the end of Checkpoint 10.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId627095"></a>Checkpoint 12:
+      Syncing</h2>
+    <p>When you're working with a remote repository, meaning one that is hosted on a different computer than yours, you must sync it if you want your changes to be reflected for other users. The two most commonly used tools for syncing are <code>git pull</code>      and <code>git
+        push</code>.</p>
+    <p>Change to the "csp2016-17" directory. Then type <code>git pull</code>. You should see a number of changes added to your copy of the repository. You are now synced with my copy of the course website. In fact, you can open this lesson in your browser
+      by going to the directory in Windows Explorer or Finder and opening usingGit.html.</p>
+    <p>Now you should change to the "usingGitPush" subdirectory and create a text file. The file should be yourName.txt, replacing "yourName" with your name. Then add and commit the file, and type
+      <code>git push</code> and press Enter. If you get an error saying that you are behind the current commit, then type <code>git pull
+        --rebase</code> and press Enter. Then type <code>git push</code> and press Enter.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId211878"></a>Checkpoint 13:
+      Good Git Commits </h2>
+    <p>There are seven rules for good Git commits. <a href="http://chris.beams.io/posts/git-commit/">Read this
+        excellent explanation of the seven rules by Chris Beams</a>. Basically, you need to make sure that your commits: <br>
+    </p>
+    <ol>
+      <li>Separate subject from body with a blank line</li>
+      <li>Limit the subject line to 50 characters</li>
+      <li>Capitalize the subject line</li>
+      <li>Do not end the subject line with a period</li>
+      <li>Use the imperative mood in the subject line</li>
+      <li>Wrap the body at 72 characters</li>
+      <li>Use the body to explain what and why vs. how</li>
+    </ol>
+    <p>Note that rules one, six, and seven only apply when you're writing a commit message that has a body. Most of your commits won't. Create a text file in your "usingGit" repository that contains the seven rules and then add and commit it. Make sure your
+      commit message follows the seven rules exactly.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <hr size="2" width="100%">
+    <p><strong>Turn in your checkpoint sheet to the assignment basket
+        once it is completely signed. You may now work on stretch
+        projects.</strong><strong></strong><br>
+    </p>
+    <h2><a class="mozTocH2" name="mozTocId965240"></a>Study Tips</h2>
+    <ul>
+      <li>Understand how to produce a specific result using general instructions.
+      </li>
+      <li>Know the seven rules of a good git commit from memory and be able to generate good Git commits.<br>
+      </li>
+      <li>Understand the <i>best</i> way to accomplish a task in Git, even when there is another solution using Bash or PowerShell commands.
+        <br>
+      </li>
+    </ul>
+  </body>
+
+</html>
