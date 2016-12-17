@@ -1,15 +1,11 @@
 body {
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 40px auto;
+	padding: 0 10px;
     background-color: aliceblue;
     line-height: 1.5em;
     font-family: sans-serif;
     color: darkslategray;
-}
-
-p {
-    margin-bottom: 1em;
 }
 
 p.checkpoint {
@@ -19,7 +15,6 @@ p.checkpoint {
     background-color: coral;
     font-family: monospace;
     font-size: 1.5em;
-    line-height: 1.5em;
 }
 
 code {
@@ -32,4 +27,16 @@ code {
 h1 {
     text-align: center;
     margin-top: 1em;
+}
+
+input:invalid {
+  border: 3px solid red;
+}
+
+input:valid {
+  border: 3px solid green;
+}
+
+form.quiz {
+	margin: 1em 0em;
 }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Using Nano</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta content="John Olinda" name="author">
+    <meta content="Students will learn how to use the Nano text editor."
+      name="description">
+  </head>
+  <body>
+    <h1>Using Nano<br>
+    </h1>
+    <p>You'll need to use your PocketCHIP for this lesson. Find yours in
+      the bin and make sure it powers on.</p>
+    <ul id="mozToc">
+      <!--mozToc h2 1 h3 2 h4 3 h5 4 h6 5-->
+      <li><a href="#mozTocId594311">Checkpoint 1: Launching Nano </a></li>
+      <li><a href="#mozTocId975744">Checkpoint 2: Saving</a></li>
+      <li><a href="#mozTocId786924">Checkpoint 3: Read File </a></li>
+      <li><a href="#mozTocId912231">Checkpoint 4: Getting Help </a></li>
+      <li><a href="#mozTocId60068">Checkpoint 5: Copy, Cut, and Paste</a></li>
+      <li><a href="#mozTocId205644">Checkpoint 6: Find and Replace</a></li>
+      <li><a href="#mozTocId23676"> Study Tips</a></li>
+    </ul>
+    <h2><a class="mozTocH2" name="mozTocId594311"></a>Checkpoint 1:
+      Launching Nano<br>
+    </h2>
+    <p>There are three ways to launch Nano. The first is launching it
+      with only the nano command. The second is launching it and
+      simultaneously creating a new file. The third is launching it and
+      editing an existing file.</p>
+    <p>Open the terminal. Type <code>nano</code> without any arguments
+      or flags and press Enter. You should see this:</p>
+    <img alt="" title="What you should see when you launch nano without
+      any arguments." src="images/chrome_2016-09-25_16-03-30.png"
+      height="485" width="800"><br>
+    <p>Close Nano by pressing Control-X. Now, type <code>nano foo.md</code>
+      and press Enter. You should see this:</p>
+    <img alt="" title="This is what you should see when you launch Nano
+      with a new file argument."
+      src="images/chrome_2016-09-25_16-09-29.png" height="485"
+      width="800">
+    <p>You can see at the top of the terminal that the file name is
+      listed. Type in a sentence or two and then close Nano by pressing
+      Control-X. This time, Nano will ask you to confirm your changes by
+      pressing Y, or discard them by pressing N. You can cancel by
+      pressing Control-C. Save your changes and confirm the filename by
+      pressing Enter.</p>
+    <p>Now type <code>nano foo.md</code> and press Enter. You should
+      see the same file again. Add a new line at the bottom of the file
+      and type <code>I've completed Checkpoint 1</code>. The close the
+      file by pressing Control-X. Press Y, but this time change the name
+      of the file to <code>checkpoint1.md</code> before you press
+      Enter.</p>
+    <p>Stream the contents of the new file to your terminal using <code>cat</code>
+      and then raise your hand.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+      this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId975744"></a>Checkpoint 2:
+      Saving</h2>
+    <p>Open <code>foo.md</code> in nano and delete all the text inside.
+      Then press Control-O to save the file without closing it. If
+      you've done this correctly, your screen should look like this:</p>
+    <img alt="" title="What you should see if you've saved the file
+      correctly." src="images/chrome_2016-09-25_18-24-59.png"
+      height="485" width="800">
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+      this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId786924"></a>Checkpoint 3: Read
+      File<br>
+    </h2>
+    <p>You should still have <code>foo.md</code> open from the last
+      checkpoint. If not, open it now. Then press Control-R to read
+      another file and insert it into the current file. Type in <code>checkpoint1.md</code>
+      when it prompts you and press Enter. Now <code>foo.md</code>
+      contains the exact contents of <code>checkpoint1.md</code>.</p>
+    <img alt="" title="You should see something similar after you read
+      the contents of checkpoint1.md into foo.md."
+      src="images/chrome_2016-09-25_18-31-33.png" height="485"
+      width="800">
+    <p>What happens if you run this command on a file that's not empty?
+      Go ahead and exit Nano, and be sure to save your changes.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+      this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId912231"></a>Checkpoint 4:
+      Getting Help<br>
+    </h2>
+    <p>Open Nano and press Control-G. This takes you to the manual for
+      the program if you ever need to reference it while you're working.
+      Skim through the whole file before moving on.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+      this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId60068"></a>Checkpoint 5: Copy,
+      Cut, and Paste</h2>
+    <p>Type the following, including blank lines, into a new file called
+      <code>checkpoint5.md</code>:<br>
+    </p>
+    <img alt="" src="images/chrome_2016-09-25_19-00-05.png" height="485"
+      width="800">
+    <p>Now, move your cursor to the beginning of one of the numbered
+      lines using the arrow keys. Press Control-K to cut the line. Then
+      move your cursor somewhere else in the list and press Control-U to
+      uncut (paste) the text in. Try this in other places until you're
+      comfortable, and then move everything back to the original layout.</p>
+    <p>Then press Alt-A (Alt is the Meta key in Nano) to start
+      highlighting, and then use the arrow keys to move around and
+      highlight text. Then press Alt-6 to copy the highlighted text. Go
+      ahead and paste it somewhere else. Then remove the extra text
+      using Control-K until the file looks like the original. Exit and
+      save.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+      this checkpoint.</p>
+    <h2><a class="mozTocH2" name="mozTocId205644"></a>Checkpoint 6: Find
+      and Replace</h2>
+    <p>Open a new file in nano called checkpoint6.md and use Control-R
+      to read the contents of checkpoint5.md into it. Then save the
+      file. Now, press Control-W and find the word "rice" in the file.
+      You'll notice that once you press Enter the cursor moves to the
+      beginning of the word you searched for. Try this with several
+      different words.</p>
+    <p>Now use Control-\ to search for a word and then replace it. In
+      this case, we will search for the word "Rice" and replace it with
+      the words "Brown rice". Try doing this with several other words.</p>
+    <p>Now do a search for the word "Here" and replace it with "There".
+      But this time, instead of just confirming the change, we want to
+      press A to change all occurrences of "Here" at the same time.</p>
+    <img alt="" src="images/2016-09-25_20-06-54.gif" height="486"
+      width="800">
+    <p>Notice that your last search is saved every time you search, so
+      you can just press enter to do the same search again. Then save
+      and exit.<br>
+    </p>
+    <p class="checkpoint">Raise your hand and have Mr. Olinda verify
+      this checkpoint.</p>
+    <p></p>
+    <p><strong></strong></p>
+    <hr size="2" width="100%">
+    <p><strong>Now that you have tried the basics of Nano and Vim, you
+        should be prepared to handle working with text on almost any
+        Linux or Unix machine, even if it doesn't come with a graphical
+        user interface. Turn in your checkpoint sheet to the assignment
+        basket once it is completely signed. You may now work on stretch
+        projects.</strong><strong> </strong></p>
+    <h2><a class="mozTocH2" name="mozTocId23676"></a> Study Tips</h2>
+    <ol>
+      <li>Understand how to use all of the commands at the bottom of the
+        Nano interface and know how to look for help in the Nano help
+        file.</li>
+      <li>Understand how to create, open, edit, and save text files
+        using Nano.<br>
+      </li>
+    </ol>
+  </body>
+</html>
