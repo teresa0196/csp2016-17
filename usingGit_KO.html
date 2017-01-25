@@ -13,7 +13,7 @@
   <body>
     <h1>Git 사용하기</h1>
     <p>Git은 버전 관리 시스템의 종류입니다. 우리는 프로그램, 문서, 그리고 다른 정보의 형태의 변경 사항을 추적하기 위해 버전 관리 시스템을 사용합니다. 이 것은 우리가 작업하는데 오류 수정을 할 수 있게 해주고, 정보 기록을 보존할 수 있게 해줍니다. Git은 Github, Gitlab, BitBucket과 같은 공동 소프트웨어 개발 사이트를 만들기도 했습니다.</p>
-    <p> 우리는 명령 행에서 Git을 알맞게 사용하는 법을 배울 것입니다. 다음의 명령들은 항상 사용하게 될 것이므로 Git Cheat Sheet을 꺼내어 하이라이트하십시오:  <code>git pull</code>,
+    <p> 우리는 명령 행에서 Git을 알맞게 사용하는 법을 배울 것입니다. 다음의 명령들은 항상 사용하게 될 것이므로 Git Cheat Sheet을 꺼내어 하이라이트하세:  <code>git pull</code>,
       <code>git add</code>, <code>git commit</code>, <code>git
         push</code>.</p>
     <ul id="mozToc">
@@ -21,9 +21,9 @@
       <li><a href="#mozTocId447212">체크포인트 1: Git 업데이트하기</a></li>
       <li><a href="#mozTocId275915">체크포인트 2: Git 구성하기</a></li>
       <li><a href="#mozTocId509786">체크포인트 3: Git 튜토리얼</a></li>
-      <li><a href="#mozTocId569043">체크포인트 4: 리포지토리 생성하기 </a></li>
+      <li><a href="#mozTocId569043">체크포인트 4: 저장소 생성하기 </a></li>
       <li><a href="#mozTocId151831">체크포인트 5: 변경사항 만들기</a></li>
-      <li><a href="#mozTocId962838">체크포인트 6: branching</a></li>
+      <li><a href="#mozTocId962838">체크포인트 6: branch 만들기</a></li>
       <li><a href="#mozTocId223997">체크포인트 7: 삭제와 이름변경하기</a></li>
       <li><a href="#mozTocId728930">체크포인트 8: gitignore</a></li>
       <li><a href="#mozTocId922769">체크포인트 9: 담아두기</a></li>
@@ -34,156 +34,138 @@
       <li><a href="#mozTocId965240"> 공부 팁</a></li>
     </ul>
     <h2><a class="mozTocH2" name="mozTocId447212"></a>체크포인트 1: Git 업데이트하기</h2>
-    <p>Git 웹사이트에 들어가 최신 버전을 다운로드 받으십시오. 기본 설정으로 설치하십시오.</p>
-    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으십시오.</p>
-    <h2><a class="mozTocH2" name="mozTocId275915"></a>Checkpoint 2:
-      Configure Git</h2>
-    <p>Although you've already configured Git for this class, go ahead and double-check your settings.</p>
-    <p>Type <code>git config --global user.name "Your Name"</code>, replacing "Your Name" with your actual first and last name. Then press Enter. This helps other developers know who made the changes in the Git repository. </p>
-    <p>Type <code>git config --global user.email
-        "yourname@seoulchristian.org"</code>, replacing "yourname@seoulchristian.org" with your school email address. Then press Enter. This helps other developers know where to contact you. </p>
-    <p>Type <code>git config --global color.ui auto</code> and press Enter. This adds some color to the command line output to help you read it more easily.</p>
-    <p>Then type <code>git config --list</code> and press Enter to make sure you've set everything properly.</p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId509786"></a>Checkpoint 3: Git
-      Tutorials</h2>
-    <p>Watch the two videos below to learn what version control and Git are conceptually (subtitles are available):</p>
+    <p>Git 웹사이트에 들어가 최신 버전을 다운로드 받으세요. 기본 설정으로 설치하시길 바랍니다.</p>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId275915"></a>체크포인트 2:
+       Git 구성하기</h2>
+    <p>이 수업을 위해 이미 Git 환경을 설정했더라도 다시 확인해보세요.</p>
+    <p> <code>git config --global user.name "사용자 이름"</code>에서 "사용자 이름"은 실제 본인의 성과 이름으로 대체한 후 입력하세요. 그리고 엔터 키를 누르세요. 이 것은 다른 개발자들이 Git 저장소에 누가 변경사항을 만들었는지 알 수 있도록 해줍니다. </p>
+    <p> 또 <code>git config --global user.email
+        "이름@seoulchristian.org"</code>에서 "이름@seoulchristian.org"은 본인의 학교 이메일 주소로 대체한 후 입력하세요. 그리고 또 한번 엔터 키를 누르세요. 이 것은 다른 개발자들이 당신에게 연락을 할 수 있도록 하기 위함입니다. </p>
+    <p>이번엔   <code>git config --global color.ui auto</code> 을 입력하고 엔터 키를 누르세요. 당신이 더 쉽게 읽을 수 있도록 명령 행에 색을 입혀줍니다. </p>
+    <p>위의 과정들을 완료했다면 정확히 설정한 것인지 확인을 위해<code>git config --list</code>을 입력하고 엔터 키를 누르세요. </p>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId509786"></a>체크포인트 3: Git
+      튜토리얼</h2>
+    <p>아래의 두 영상을 보고 버전 관리와 Git의 개념을 이해하세요 (자막 가능):</p>
     <p><iframe src="https://www.youtube-nocookie.com/embed/8oRjP8yj2Wo" allowfullscreen="" frameborder="0" height="450" width="800"></iframe>
     </p>
     <p><iframe src="https://www.youtube-nocookie.com/embed/uhtzxPU7Bz0" allowfullscreen="" frameborder="0" height="450" width="800"></iframe>
     </p>
-    <p>Go to the <a href="http://git.rocks/getting-started/">Getting
-        Started with Git tutorial</a> and complete it. Continue through all the tutorials.</p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId569043"></a>Checkpoint 4:
-      Create a Repository</h2>
-    <p>Now we're going to try this for real. Open Git Bash (or Terminal on Mac) and type <code>mkdir projects</code> and press Enter. Then use <code>cd</code> to enter the "projects" directory and type <code>git init usingGit</code> and press Enter. You've
-      just created a repository called "usingGit" on your computer.</p>
-    <p>Make sure you're still in the "projects" directory and type <code>git
-        clone git@github.com:seoul-christian-school/csp2016-17.git</code> and press Enter.</p>
-    <p>Then use <code>cd</code> and <code>ls</code> to check out the contents of both the "usingGit" and "csp2016-17" directories. What is in each one?</p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId151831"></a>Checkpoint 5: Make
-      Changes</h2>
-    <p>In Git Bash, go to your "usingGit" repository. Type git status and press Enter. You should see a message telling you there are no changes. Now type <code>touch first.txt</code> and press Enter. Then type <code>vim first.txt</code> and press Enter.
-      You'll now see a different interface. This is the Vim text editor installed on almost every Unix or Linux machine. Another one you might see is Nano. To edit the file, you need to change to "insert" mode by pressing the letter i on your keyboard.</p>
-    <p>Now that you're in insert mode, type <code>Here is some text.</code> into the file. Then press Escape on your keyboard to go back to normal mode. Then type <code>:wq</code> and press Enter to save (write) your changes and quit Vim.</p>
-    <p>Now type <code>git status</code> and press Enter. You should see something similar to this:</p>
+    <p><a href="http://git.rocks/getting-started/">  Getting
+        Started with Git tutorial</a>에 들어가서 과정들을 완료하세요. 모든 튜토리얼을 끝마치시길 바랍니다.</p>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId569043"></a>체크포인트 4:
+      리포지토리 생성하기</h2>
+    <p>Git Bash나 terminal을 열고 <code>mkdir projects</code>을 입력한다음 엔터를 누르세요. 그리고 <code>cd</code>을 사용해 "projects" 디렉토리에 들어가신 후, <code>git init usingGit</code>을 입력하고 엔터를 누르세요. 방금 우리는 컴퓨터에 "usingGit"이라는 레포지토리를 만든 것입니다.</p>
+    <p>"projects" 디렉토리에 있는게 맞다면 <code>git
+        clone git@github.com:seoul-christian-school/csp2016-17.git</code>을 입력하신 후 엔터를 누르세요.</p>
+    <p>그리고 <code>cd</code> 와 <code>ls</code>를 사용해 "usingGit"과 "csp2016-17" 디렉토리 안의 컨텐츠를 확인하세요. 각 디렉토리 안에는 무엇이 있나요?</p>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId151831"></a>체크포인트 5: 변경사항 만들기
+      </h2>
+    <p>Git Bash에서 "usingGit" 레포지토리에 들어가신 후 git status를 입력하고 엔터를 누르세요. 변경사항이 없다는 메시지가 나올 것입니다. 이제 <code>touch first.txt</code>를 입력하고 엔터를 누르세요. 그리고 <code>vim first.txt</code>도 입력하신 후 엔터를 누르세요.
+      이제 다른 인터페이스가 보이게 될 것입니다. 이 것은 거의 모든 유닉스와 리눅스에 설치되어 있는 Vim 텍스트 편집기입니다. 혹은 Nano를 보실 수도 있습니다. 이 파일을 편집하기 위해선 키보드의 i를 눌러 삽입모드로 변경해야합니다.</p>
+    <p>이제 삽입모드에 있다면, <code>Here is some text.</code>를 파일에 입력하세요. 그리고 키보드의 Escape 키를 통해 정상 모드로 돌아가세요. 그리고 <code>:wq</code>를 입력하고 엔터를 눌러 변경사항을 저장하고 Vim을 종료하세요.</p>
+    <p><code>git status</code>를 입력하고 엔터를 누르세요. 다음과 비슷한 내용을 보셔야합니다:</p>
     <div align="center"><img alt="The output of git status." title="The
         output of git status." src="images/mintty_2016-09-07_15-42-59.png" height="422" width="800"> </div>
-    <p>You'll notice that it gives you instructions on what to do next. Go ahead and type <code>git add first.txt</code> and press Enter to add the file to version control. Then use <code>git status</code> again to see what's changed.</p>
-    <p>Then type <code>git commit -m "Add first.txt to version control"</code> and press Enter. This records the current version of the file in Git. The <code>-m</code> flag tells Git you are going to type a message after the command. If you don't use the
-      <code>-m</code> flag then it will bring up a Vim window where you can type your message. </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId962838"></a>Checkpoint 6:
-      Branching</h2>
-    <p>Sometimes we need to work on certain parts of a project without disturbing the master version, which is called the "master branch" in Git. To do that, simply type <code>git branch special</code> and press Enter. Now type <code>git branch</code> to
-      see the branches in your repository. The one you're currently on is green.</p>
-    <p>Now type <code>git checkout special</code> and press Enter to switch the the special branch. Use git branch again to see what's changed. </p>
+    <p>다음 단계에서 무엇을 해야 하는지 방법이 나올 것입니다. <code>git add first.txt</code>를 입력하고 엔터를 눌러 버전 관리 시스템에 파일을 추가하세요. <code>git status</code>를 이용해 변경 내용을 확인하세요.</p>
+    <p>다음으로 <code>git commit -m "Add first.txt to version control"</code>를 입력하고 엔터를 누르세요. 이 것은 현재 버전의 파일을 Git에 기록합니다. <code>-m</code> flag은 명령 다음에 메세지를 입력할 것이라는 것을 Git에게 알려줍니다.
+      <code>-m</code> flag을 사용하지 않는다면 Vim 창이 나타나 메세지를 입력하도록 할 것입니다.</p>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId962838"></a>체크포인트 6:
+      Branch 만들기</h2>
+    <p>가끔 Git에서 "master branch"이라 불리는 마스터 버전을 방해하지 않고 프로젝트를 해야하는 경우가 있습니다. 그러기 위해선 간단히 <code>git branch special</code>을 입력하고 엔터를 누르세요. 그리고 <code>git branch</code> 를 눌러 레포지토리 안의 branch들을 확인하세요.
+      현재 branch는 초록색으로 나타납니다.</p>
+    <p>이제 <code>git checkout special</code>을 입력하고 엔터를 눌러 special branch로 이동하세요. 무엇이 변경되었는지 궁금하다면 git branch를 입력하세요.</p>
     <img alt="Git checkout changes." title="Git checkout changes." src="images/mintty_2016-09-07_16-20-35.png" height="422" width="800">
-    <p>Now, type <code>vim second.txt</code> and press Enter. Add some text to the file just like you did last time and save it. Then use
-      <code>git add</code> and <code>git commit -m</code> to save the new file into Git. Then type <code>git checkout master</code> and press Enter to switch back to the master branch.</p>
-    <p>Type <code>git merge special</code> and press Enter. This pulls all the information you created in the "special" branch into the "master" branch. If you visualize this, it is like a road that goes from one lane to two lanes, and then back to one lane.
-      The information is split into two (or more branches) and then brought back into one. </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId223997"></a>Checkpoint 7:
-      Delete and Rename</h2>
-    <p>You already know how to delete and rename files using <code>rm</code> and <code>mv</code>. When you're working with files in Git, you <i>can</i> use those tools, but it's better to use <code>git rm</code> and <code>git
-
-
-        mv</code> to save some steps.</p>
-    <p>Type <code>touch deleteThisFile.txt renameThisFile.txt</code> and press Enter. Then type <code>git add *</code> to add all untracked files to version control. Then use <code>git commit -m</code> to save your changes.</p>
-    <p>Type <code>git rm deleteThisFile.txt</code> and press Enter. This command both removes the file from the directory and also tells Git about the change. Use <code>git status</code> to see the effects of this command. If you just wanted to remove the
-      file from version control without deleting the file, you would use <code>git
-
-
-        rm --cached</code>.</p>
-    <p>Use <code>git commit -m</code> to save your changes.</p>
-    <p>Type <code>git mv renameThisFile.txt third.txt</code> and press Enter. This renames the file and tells Git about the change. Use <code>git
-
-
-        status</code> to see the effects of this command.</p>
-    <p>Use <code>git commit -m</code> to save your changes. </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId728930"></a>Checkpoint 8:
+    <p>또한 <code>vim second.txt</code>을 입력하신 후 엔터를 누르세요. 저번에 했던 것처럼 파일 내에 문자를 입력한 후 저장하세요.
+      <code>git add</code> 와 <code>git commit -m</code>을 입력해 Git에 새 파일을 추가하실 수 있습니다. 그리고 <code>git checkout master</code>을 입력해 master branch로 돌아오세요.</p>
+    <p>이번엔 <code>git merge special</code>를 입력하고 엔터를 누르세요. "special" branch에서 생성한 모든 정보를 "master" branch로 전해줍니다. 이것을 형상화 해보자면, 길이 두 길로 나뉘었다가 다시 한 길로 합쳐지는 것과 같습니다.
+      정보들이 두 branch(또는 그 이상)로 나뉘었다가 다시 하나로 통합된 것입니다.</p>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId223997"></a>체크포인트 7:
+      삭제와 이름변경하기</h2>
+    <p>이미 우리는 <code>rm</code> 과 <code>mv</code>를 이용해 삭제하고 이름을 변경하는 법을 알고 있습니다. Git안의 파일들을 작업하고 있을 때 그 도구들을 사용할 수 있지만, <code>git rm</code> and <code>git
+	 mv</code>를 사용해 과정들을 저장하는 것이 더 좋은 방법이라 할 수 있습니다.
+    <p><code>touch deleteThisFile.txt renameThisFile.txt</code>을 입력 후 엔터를 누르세요. 그리고 <code>git add *</code>를 통해 버전 관리에 기록되지 않은 모든 파일들을 추가하세요. 변경 사항을 저장하기 위해 <code>git commit -m</code>을 입력해야 합니다.</p>
+    <p><code>git rm deleteThisFile.txt</code>을 입력하고 엔터를 누르세요. 이 명령은 디렉토리 내에서 파일을 삭제하고 Git에게도 변경사항을 전송합니다. <code>git status</code>를 사용해 이전 명령에 대한 결과를 확인해보세요. 파일을 삭제하지 않고 버전 관리에서만 지우고싶다면
+      <code>git rm --cached</code>를 입력하세요.</p>
+    <p><code>git commit -m</code>을 사용해 변경사항을 저장하시길 바랍니다.</p>
+    <p>이번엔 <code>git mv renameThisFile.txt third.txt</code>을 입력하고 엔터를 누르세요. 이 명령은 파일 이름을 변경하고 Git에게 변경사항을 전해줍니다. <code>git
+	status</code>를 통해 이전 명령에 대한 결과를 확인해보세요.</p>
+    <p>마지막으로 <code>git commit -m</code>을 통해 변경사항을 저장하세요.</p>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId728930"></a>체크포인트 8:
       gitignore</h2>
-    <p>Git can be configured to ignore certain files, types of files, or directories. This can be helpful if you're working on a group project and are keeping notes in the directory that aren't going to help other users. You need it, but other people don't,
-      so you configure Git to ignore it.</p>
-    <p>First, create a new file called "ignore.txt" in your "usingGit" directory. Then type <code>vim .gitignore</code> and press Enter. Once you're in Vim, press i to enter the editing mode and type <code>ignore.txt</code>. Then press Escape and type <code>:wq</code>      and press Enter to save and quit Vim. Now, when you use git status, you should only see the new .gitignore file to be added. Use <code>git add</code> to track this file and then commit it.<br>
+    <p>Git은 특정 파일, 파일 종류, 또는 디렉토리들을 무시할 수 있게 구성되어 있습니다. 이 것은 그룹 프로젝트를 진행할 때 다른 사용자에겐 도움이 되지 않는 노트를 보관할 때 도움이 됩니다. 본인은 필요하지만 다른 사용자들은 아닐 때, Git이 무시하도록 구성할 수 있습니다. </p>
+    <p>먼저, "usingGit"디렉토리 안에 "ignore.txt"라는 새 파일을 생성합니다. 그리고 <code>vim .gitignore</code>을 입력하신 후 엔터를 누르십시오. Vim 안에 있다면, i를 눌러 편집 모드에 들어가시고 <code>ignore.txt</code>를 입력하세요. 그리고 Vim을 저장하고 나가기 위해 Esc 키를 누른 후 <code>:wq</code>를 입력하고 엔터를 누르세요. git status를 입력하면 .gitignore 파일이 추가된 것만 보여야합니다. <code>git add</code>를 사용해 파일을 추적하고 commit하세요.<br>
     </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId922769"></a>Checkpoint 9:
-      Stashing</h2>
-    <p>When you make changes to a repository, but you haven't committed them yet, you can store the changes and changed (or even deleted) files without deleting them permanently. This allows you to save them to apply them later, even after another commit.</p>
-    <p>First, create three text files using <code>touch</code> and then add them to Git. Now, if you use <code>git status</code> you'll see the pending changes. But instead of using <code>git commit</code>, type <code>git stash save</code>. You'll see a
-      message explaining where the files are located. Now use <code>ls</code> to verify the new files aren't present. The directory should look just like it did after your last commit. Type <code>git stash pop</code> to bring the files back. Use <code>ls</code>      to make sure it worked.</p>
-    <p>Then, add and commit the new files. Now use <code>git rm</code> to delete all three files in one command. But before you commit, use <code>git stash</code> (you don't have to type "save" at the end) to save the changes in memory and restore the directory
-      to your last commit. Now, you should see the files back in place. Using <code>git stash pop</code> will delete them again. Go ahead and add and commit the changes.<br>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId922769"></a>체크포인트 9:
+      담아두기</h2>
+    <p>레포지토리에 변경사항을 만들었지만 아직 commit하지 않았다면 파일을 영구적으로 삭제하지 않고 변경사항과 변경된 파일들을 저장해 놓을 수 있습니다. 이를 통해 나중에 다른 작업을 수행한 후에도 나중에 이를 적용할 수 있습니다.</p>
+    <p>먼저 <code>touch</code>를 이용해 세 파일들을 생성하고 Git에 추가하세요. <code>git status</code>를 입력하면 미결정된 변경사항들을 보실 수 있습니다. <code>git commit</code>을 사용하는 대신, <code>git stash save</code>을 입력하세요. 파일들의 위치르 설명하는 메시지가 표시될 것입니다. 이제 <code>ls</code>를 사용해 새 파일들이 존재하지 않는지 확인해보세요.
     </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId661152"></a>Checkpoint 10:
-      History</h2>
-    <p>Especially when you're working with other people, it is important to find out when certain changes were made and who made them. This is when you use <code>git log</code>.</p>
-    <p>Type <code>git log</code> and press Enter to see what happens. The output is "piped" into less, so you can scroll through it with the Space Bar and press q to quit. All the commits should be by you, of course.</p>
-    <p>Now, type <code>git log --grep=</code> and add a search word. Grep is a search tool used in Unix and Linux systems. If any commits match that word, they will appear when you press Enter. Now figure out how to search for more than one word at a time.
-      Then type <code>git log --help</code> and press Enter to open the manual page in your browser. Try at least two other options for searching through the history of your repository.<br>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId661152"></a>체크포인트 10:
+      기록</h2>
+    <p>특히 다른 사람들과 함께 작업중이라면 어떤 사람이 어떤 변경을 했는지 알아내는 것이 중요합니다. 이럴 때는 <code>git log</code>을 사용하세요.</p>
+    <p><code>git log</code>을 입력하고 엔터를 눌러 무슨 일이 생기는지 확인하세요. 스페이스 바를 통해 스크롤 한 다음 q키를 눌러 종료할 수 있습니다.</p>
+    <p><code>git log --grep=</code>를 입력해 검색 단어를 추가해보세요. Grep는 유닉스와 리눅스 시스템에서 사용되는 검색툴입니다. 만약 해당 단어와 일치하는 commit이 있다면, 엔터 키를 눌렀을 때 보여질 것입니다. 이제 한 번에 한 단어 이상을 검색하는 방법을 알아보세요.
+      그리고 <code>git log --help</code>을 입력하고 엔터를 눌러 당신의 브라우저에서 매뉴얼 페이지를 여세요. 레포지토리 내의 기록을 탐색하는데 필요한 최소 두 가지 옵션을 시도해 보세요.<br>
     </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId150669"></a>Checkpoint 11:
-      Oops...</h2>
-    <p>Sometimes you'll make a mistake and not realize it until after you commit. You have two options. You can reset the commit history back to a chosen commit and preserve your files, or you can reset back to a chosen commit and remove all the file changes
-      since then.
-    </p>
-    <p>Go ahead and create several new text files, add them, and commit them. Then edit the files using Vim so that all of the new files contain different text. Then commit them.</p>
-    <p>Now use <code>git log</code> to pull up your commit history. Choose the second-most-recent commit (yours will be different than the example below) and highlight the commit ID. Then copy it.</p>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId150669"></a>체크포인트 11:
+      이런...</h2>
+    <p>가끔 우리는 commit을 하기 전까지 실수를 깨닫지 못할 때가 있습니다. 당신은 두 옵션이 있습니다. commit기록에서 특정 commit으로 돌아가거나, 특정 commit으로 돌아간 후 모든 파일 변경사항을 삭제하는 방법이 있습니다.
+	</p>
+    <p>몇 개의 텍스트 파일을 생성하고, 추가하고, commit하세요. 그리고 모든 새 파일들이 각자 다른 내용을 갖고 있도록 Vim을 통해 파일들을 편집하세요. 그리고 내용들을 commit하세요.</p>
+    <p><code>git log</code>을 통해 commit 기록들을 불러내세요. 최근 commit들 중 두번째 commit(예시와는 다른 commit일 것입니다.)을 선택하고 commit ID를 강조표시하세요. 그리고 복사하세요.</p>
     <img alt="Highlight and copy a commit ID" title="Highlight and copy
       a commit ID" src="images/mintty_2016-09-09_08-19-20.png" height="422" width="800">
-    <p>Now type <code>git reset</code> and paste in the commit ID you just copied. This will undo your last commit but save the files that you changed.</p>
-    <p>Now use <code>git log</code> to pull up your commit history. Choose the second-most-recent commit and highlight the commit ID. Then copy it.</p>
-    <p>Now type <code>git reset --hard</code> and paste in the commit ID you just copied. This will undo the last commit and also remove the files. Your directory should now appear as it did at the end of Checkpoint 10.<br>
+    <p>이제 <code>git reset</code>을 입력하고 방금 전 복사한 commit ID를 붙여넣으세요. 이 명령은 마지막 commit을 실행 취소하지만 변경한 파일들은 저장할 수 있도록 합니다.</p>
+    <p>그리고 다시 <code>git log</code>을 통해 commit 기록들을 불러내세요. 최근 commit들 중 두번 째 commit을 강조표시 후 복사하세요. </p>
+    <p><code>git reset --hard</code>을 입력하고 방금 전 복사했던 commit ID를 붙여넣으세요. 이 명령은 마지막 commit을 실행 취소하고 파일을 삭제합니다. 당신의 디렉토리는 체크포인트 10에 있던 것처럼 나타나야합니다.<br>
     </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId627095"></a>Checkpoint 12:
-      Syncing</h2>
-    <p>When you're working with a remote repository, meaning one that is hosted on a different computer than yours, you must sync it if you want your changes to be reflected for other users. The two most commonly used tools for syncing are <code>git pull</code>      and <code>git
-        push</code>.</p>
-    <p>Change to the "csp2016-17" directory. Then type <code>git pull</code>. You should see a number of changes added to your copy of the repository. You are now synced with my copy of the course website. In fact, you can open this lesson in your browser
-      by going to the directory in Windows Explorer or Finder and opening usingGit.html.</p>
-    <p>Now you should change to the "usingGitPush" subdirectory and create a text file. The file should be yourName.txt, replacing "yourName" with your name. Then add and commit the file, and type
-      <code>git push</code> and press Enter. If you get an error saying that you are behind the current commit, then type <code>git pull
-        --rebase</code> and press Enter. Then type <code>git push</code> and press Enter.<br>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId627095"></a>체크포인트 12:
+      동기화</h2>
+    <p>만약 당신이 원격 레포지토리에서 작업을 수행중이라면 다른 사용자들도 변경사항을 볼 수 있게 하기위해 동기화를 필수로 해야합니다. 동기화를 위해 가장 흔하게 쓰이는 방법은 <code>git pull</code>과 <code>git
+        push</code>를 사용하는 것입니다.</p>
+    <p>"csp2016-17"디렉토리로 이동하세요. 그리고 <code>git pull</code>을 입력하세요. 당신의 레포지토리 복사본에 몇 변경사항들이 추가된 것이 보일 것입니다. 이제 코스 웹사이트 복사본과 동기화 된 것입니다. 윈도우 익스플로러의 디렉토리 또는 파인더에서 usingGit.html을 열어 이 레슨을 열어볼 수 있습니다.</p>
+    <p>이제 "usingGitPush"라는 하위 디렉토리로 이동해 텍스트파일을 생성하세요. 파일 이름은 yourName.txt이어야합니다(yourName은 실제 본인의 이름으로 대체하세요). 그리고 파일을 추가하고 commit한 다음
+      <code>git push</code>를 입력하고 엔터를 누르세요. 만약 현재 commit 전에 있다는 에러가 생긴다면 <code>git pull
+        --rebase</code>를 입력하고 엔터를 누르세요. 마지막으로 <code>git push</code>를 입력하고 엔터를 누르세요.<br>
     </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
-    <h2><a class="mozTocH2" name="mozTocId211878"></a>Checkpoint 13:
-      Good Git Commits </h2>
-    <p>There are seven rules for good Git commits. <a href="http://chris.beams.io/posts/git-commit/">Read this
-        excellent explanation of the seven rules by Chris Beams</a>. Basically, you need to make sure that your commits: <br>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
+    <h2><a class="mozTocH2" name="mozTocId211878"></a>체크포인트 13:
+      좋은 Git Commit </h2>
+    <p>좋은 Git Commit을 위해선 일곱가지 규칙을 따라야합니다. <a href="http://chris.beams.io/posts/git-commit/"> Chris Beams가 작성한 일곱가지 규칙에 대한 설명글을 읽으세요.</a>. 기본적으로 당신의 commit들은 다음과 같아야합니다: <br>
     </p>
     <ol>
-      <li>Separate subject from body with a blank line</li>
-      <li>Limit the subject line to 50 characters</li>
-      <li>Capitalize the subject line</li>
-      <li>Do not end the subject line with a period</li>
-      <li>Use the imperative mood in the subject line</li>
-      <li>Wrap the body at 72 characters</li>
-      <li>Use the body to explain what and why vs. how</li>
+      <li>제목과 문단은 한 줄 띄우세요</li>
+      <li>제목은 50자 이내로 적으세요</li>
+      <li>제목 줄은 대문자로 적으세요</li>
+      <li>제목은 마침표로 끝내지 마세요</li>
+      <li>제목은 명령조로 적으세요</li>
+      <li>문단은 72자 이내로 적으세요</li>
+      <li>문단으로 무엇을, 왜, 어떻게를 설명할 수 있도록 하세요</li>
     </ol>
-    <p>Note that rules one, six, and seven only apply when you're writing a commit message that has a body. Most of your commits won't. Create a text file in your "usingGit" repository that contains the seven rules and then add and commit it. Make sure your
-      commit message follows the seven rules exactly.<br>
+    <p>1, 6, 7 번은 오직 문단이 있는 commit 메세지를 작성할 때만 필요합니다. 대부분의 commit들은 문단을 작성할 필요가 없을 것입니다. "usingGit" 레포지토리 내에 일곱가지 규칙을 포함하는 텍스트 파일을 만든 후 추가하고 commit하세요. 당신의 commit 메세지가 규칙들을 정확히 따르는지 다시 확인해보세요.<br>
     </p>
-    <p class="checkpoint">Raise your hand and have Mr. Olinda verify this checkpoint.</p>
+    <p class="checkpoint">손을 들고 올린다 선생님께 체크포인트를 확인 받으세요.</p>
     <hr size="2" width="100%">
-    <p><strong>Turn in your checkpoint sheet to the assignment basket
-        once it is completely signed. You may now work on stretch
-        projects.</strong><strong></strong><br>
+    <p><strong>모든 체크포인트들에 서명을 받았다면 종이를 숙제 바구니에 제출하세요. 당신은 이제 프로젝트를 작업할 수 있습니다.</strong><strong></strong><br>
     </p>
-    <h2><a class="mozTocH2" name="mozTocId965240"></a>Study Tips</h2>
+    <h2><a class="mozTocH2" name="mozTocId965240"></a>공부 팁</h2>
     <ul>
-      <li>Understand how to produce a specific result using general instructions.
+      <li>일반적인 지침을 통해 특정 결과를 생성하는 법을 이해합니다.
       </li>
-      <li>Know the seven rules of a good git commit from memory and be able to generate good Git commits.<br>
+      <li>좋은 Git commit에 대한 일곱가지 규칙을 알고 그에 따른 좋은 Git commit들을 만들어냅니다.<br>
       </li>
-      <li>Understand the <i>best</i> way to accomplish a task in Git, even when there is another solution using Bash or PowerShell commands.
+      <li>Bash나 PowerShell 명령들을 사용하는 해결책이 있더라도 Git으로 해결하는 최상의 방법을 이해합니다.
         <br>
       </li>
     </ul>
